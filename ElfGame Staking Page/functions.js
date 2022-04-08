@@ -106,6 +106,7 @@ async function loadStakingContract() {
 
 async function loadMintingContract() {
   var json = await getContractsJSON();
+  console.log(json);
   return await new web3.eth.Contract(json.mintContractABI, json.mintContractAddress);
 }
 
