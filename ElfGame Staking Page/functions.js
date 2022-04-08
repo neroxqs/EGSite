@@ -429,11 +429,13 @@ async function mintWithEthereum(){
 async function mintWithMana(){
   var numberBox = document.getElementById("mintAmount");
   var json = await getContractsJSON();
-  console.log(json.mintContractAddress);
   const accounts = await getAccounts();
+  
+  var tokens = await window.manaContract.methods.tokensLeft().call();
+  console.log(tokens);
 
-  const price = await window.mintContract.methods.manaPrice(numberBox.value);
-  price = web3.utils.toBN(price);
+  //const price = await window.mintContract.methods.manaPrice(numberBox.value);
+  const price = web3.utils.toBN((100*10**18)*numberBox.value);
 
   await window.manaContract.methods.approve(json.mintContractAddress, price).send({ from: accounts[0] });
   await window.mintContract.methods.buyWithMana(numberBox.value).send({ from: accounts[0] });
