@@ -19,7 +19,6 @@ var unstakedOrcsArray;
 async function getContractsJSON() {
   const response = await fetch("./contract_info/contracts.json");
   const json = await response.json();
-  console.log(json);
   return json;
 }
 
@@ -31,7 +30,7 @@ async function getImageNFT(){
   allIds.forEach(async function(id){
     response = await fetch(idToURI.get(id));
     json = await response.json();
-
+    console.log(json.image);
     idToImage.set(id,json.image);
   });
 }
