@@ -386,7 +386,7 @@ async function loadTokens(){
   await loadStakedOrcs();
   await loadUnstakedElfsOrcs();
 
-  getImageNFT();
+  await getImageNFT();
 
   displayStakedNFTS("Elf");
   displayStakedNFTS("Orc");
@@ -635,4 +635,3 @@ async function claimOrcRewards(){
 
 getContractsJSON();
 load();
-console.log(unstakedElfsArray[0]);
