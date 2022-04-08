@@ -23,7 +23,6 @@ async function getContractsJSON() {
 }
 
 async function getImageNFT(){
-  /*
   var allIds = stakedElfsArray.concat(unstakedElfsArray,stakedOrcsArray,unstakedOrcsArray);
   var response;
   var json;
@@ -34,7 +33,6 @@ async function getImageNFT(){
 
     idToImage.set(id,json.image);
   });
-  */
 }
 
 // Time format functions
