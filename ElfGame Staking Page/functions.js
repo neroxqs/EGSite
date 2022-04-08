@@ -30,7 +30,6 @@ async function getImageNFT(){
   allIds.forEach(async function(id){
     response = await fetch(idToURI.get(id));
     json = await response.json();
-    console.log(json.image);
     idToImage.set(id,json.image);
   });
 }
@@ -349,6 +348,7 @@ async function drawNFT(typeArray, section, staked){
     }
 
     var imageHTML = document.createElement('img');
+    console.log(idToImage.get(id));
     imageHTML.src = idToImage.get(id);
     imageHTML.id = 'NFTImage';
 
