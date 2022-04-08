@@ -185,7 +185,7 @@ async function rewards() {
     totalMana = 0;
     manaTaxPerOrc = await window.stakeContract.methods.manaTaxPerOrc().call()
 
-    stakedElfsArray.forEach(function(id){
+    stakedElfsArray.forEach(async function(id){
       var elf = stakedElfsInfo.get(id);
       var rewardElf = await window.stakeContract.methods.calculateReward(elf).call();
 
