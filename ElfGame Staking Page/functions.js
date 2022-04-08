@@ -628,4 +628,4 @@ async function claimOrcRewards(){
   updateMana();
 }
 
-load();
+//load();
