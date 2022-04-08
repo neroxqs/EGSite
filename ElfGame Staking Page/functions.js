@@ -63,8 +63,8 @@ function toFormatString(tStruct){
 
 async function checkNetwork() {
   web3.eth.net.getId().then((networkId) => {
-    if (networkId != 137) {
-      alert("Connect to matic mainnet first.");
+    if (networkId != 80001) {
+      alert("Connect to Mumbai Testnet first.");
     }
   })
   .catch((err) => {
@@ -116,10 +116,8 @@ async function loadManaContract() {
 }
 
 async function loadWethContract() {
-  /*
   var json = await getContractsJSON();
   return await new web3.eth.Contract(json.wethContractABI, json.wethContractAddress);
-  */
 }
 
 // Update elements
@@ -184,40 +182,7 @@ async function rewards() {
   var minute = 60000;
   var totalMana;
   var manaTaxPerOrc;
-
-  async function cycle(){
-    totalMana = 0;
-    manaTaxPerOrc = await window.stakeContract.methods.manaTaxPerOrc().call()
-
-    stakedElfsArray.forEach(function(id){
-      var stakeDate = stakingTimestamp.get(id);
-      var currentDate = new Date();
-      var elfReward = (Math.abs(currentDate-stakeDate) * 25) / minute;
-      var rewardAmount = document.getElementById('rewardTokensAmount'+id);
-
-      //var reward = await window.stakeContract.methods.calculateReward(elf).call();
-      //reward = reward - elf.stolen;
-
-      totalMana += elfReward;
-
-      rewardAmount.innerHTML = elfReward.toFixed(2);
-    });
-
-    stakedOrcsArray.forEach(function(id){
-      var rewardAmount = document.getElementById('rewardTokensAmount'+id);
-      var orc = stakedOrcsInfo.get(id)
-      var reward = (manaTaxPerOrc - orc.tax)/(10**18);
-
-      rewardAmount.innerHTML = reward.toFixed(2);
-    });
-    
-    updateTotalElfRewards(totalMana.toFixed(2)); 
-    setTimeout(cycle, minute);
-  }
-
-  cycle();
-
-  /*
+ 
   async function cycle(){
     totalMana = 0;
     manaTaxPerOrc = await window.stakeContract.methods.manaTaxPerOrc().call()
@@ -248,7 +213,7 @@ async function rewards() {
   }
 
   cycle();
-  */
+  
 }
 
 // Loading tokens to variables
@@ -370,16 +335,6 @@ async function displayUnstakedNFTS(type){
 
 async function drawNFT(typeArray, section, staked){
   typeArray.forEach(function(id) {
-    if(stakedElfsArray.includes(id) || unstakedElfsArray.includes(id)){
-      image = 'elf.jpeg';
-    }
-    else if(stakedOrcsArray.includes(id) || unstakedOrcsArray.includes(id)){
-      image = 'orc.jpeg';
-    }
-    else{
-      image = 'none.jpg';
-    }
-
     var nft = document.createElement('section');
     nft.className = 'nft';
     nft.id = 'nft' + id;
@@ -394,8 +349,7 @@ async function drawNFT(typeArray, section, staked){
     }
 
     var imageHTML = document.createElement('img');
-    /*imageHTML.src = idToImage.get(id);*/
-    imageHTML.src = image;
+    imageHTML.src = idToImage.get(id);
     imageHTML.id = 'NFTImage';
 
     var tokenIdParagraph = document.createElement('p');
@@ -448,7 +402,7 @@ async function loadTokens(){
 
 async function load(){
   loadWeb3();
-  //checkNetwork();
+  checkNetwork();
   
   window.mintContract = await loadMintingContract();
   window.stakeContract = await loadStakingContract();
@@ -462,7 +416,6 @@ async function load(){
 // Onclick functions
 
 async function mintWithEthereum(){
-  /*
   var numberBox = document.getElementById("mintAmountEth");
   var json = await getContractsJSON();
   const accounts = await getAccounts();
@@ -472,7 +425,6 @@ async function mintWithEthereum(){
 
   await window.wethContract.methods.approve(json.stakeContractAddress, price).send({ from: accounts[0] });
   await window.mintContract.methods.publicSale(numberBox.value).send({ from: accounts[0] });
-  */
 }
 
 async function mintWithMana(){
@@ -480,26 +432,14 @@ async function mintWithMana(){
   var json = await getContractsJSON();
   const accounts = await getAccounts();
 
-  price = web3.utils.toBN((10*10**18) * numberBox.value);
-
-  for (let index = 0; index < numberBox.value; index++) {
-    await window.manaContract.methods.approve(json.mintContractAddress, price).send({ from: accounts[0] });
-    await window.mintContract.methods.mintOneRandom(accounts[0]).send({ from: accounts[0] });
-  }
-  
-  setTimeout(loadTokens, 5000);
-
-  /*
   const price = await window.mintContract.methods.manaPrice(numberbox.value);
   price = web3.utils.toBN(price);
 
   await window.manaContract.methods.approve(json.mintContractAddress, price).send({ from: accounts[0] });
   await window.mintContract.methods.buyWithMana(numberBox.value).send({ from: accounts[0] });
-  */
 }
 
 async function ambush() {
-  /*
   var arrayChecked = new Array();
   var json = getContractsJSON();
   
@@ -522,7 +462,6 @@ async function ambush() {
   else{
     alert("Select only one staked orc for ambush.");
   }
-  */
 }
 
 async function stakeElfs(){
