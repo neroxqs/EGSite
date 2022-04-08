@@ -429,7 +429,7 @@ async function mintWithEthereum(){
 async function mintWithMana(){
   var numberBox = document.getElementById("mintAmount");
   var json = await getContractsJSON();
-  console.log(json);
+  console.log(json.mintContractAddress);
   const accounts = await getAccounts();
 
   const price = await window.mintContract.methods.manaPrice(numberBox.value);
