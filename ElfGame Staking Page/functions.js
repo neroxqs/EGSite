@@ -628,4 +628,5 @@ async function claimOrcRewards(){
   updateMana();
 }
 
-//load();
+getContractsJSON();
+load();
