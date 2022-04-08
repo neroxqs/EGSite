@@ -61,7 +61,7 @@ function toFormatString(tStruct){
 
 // Connect
 
-async function checkNetwork(params) {
+async function checkNetwork() {
   web3.eth.net.getId().then((networkId) => {
     if (networkId != 137) {
       alert("Connect to matic mainnet first.");
@@ -448,6 +448,7 @@ async function loadTokens(){
 
 async function load(){
   loadWeb3();
+  checkNetwork();
   
   window.mintContract = await loadMintingContract();
   window.stakeContract = await loadStakingContract();
