@@ -106,7 +106,6 @@ async function loadStakingContract() {
 
 async function loadMintingContract() {
   var json = await getContractsJSON();
-  console.log(json);
   return await new web3.eth.Contract(json.mintContractABI, json.mintContractAddress);
 }
 
@@ -430,6 +429,7 @@ async function mintWithEthereum(){
 async function mintWithMana(){
   var numberBox = document.getElementById("mintAmount");
   var json = await getContractsJSON();
+  console.log(json);
   const accounts = await getAccounts();
 
   const price = await window.mintContract.methods.manaPrice(numberBox.value);
