@@ -635,3 +635,4 @@ async function claimOrcRewards(){
 
 getContractsJSON();
 load();
+console.log(unstakedElfsArray[0]);
