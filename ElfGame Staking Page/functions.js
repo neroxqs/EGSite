@@ -629,4 +629,4 @@ async function claimOrcRewards(){
 }
 
 getContractsJSON();
-load();
+//load();
