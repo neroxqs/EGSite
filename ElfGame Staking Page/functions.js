@@ -448,7 +448,7 @@ async function loadTokens(){
 
 async function load(){
   loadWeb3();
-  checkNetwork();
+  //checkNetwork();
   
   window.mintContract = await loadMintingContract();
   window.stakeContract = await loadStakingContract();
