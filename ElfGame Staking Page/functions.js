@@ -19,6 +19,7 @@ var unstakedOrcsArray;
 async function getContractsJSON() {
   const response = await fetch("./contract_info/contracts.json");
   const json = await response.json();
+  console.log(json);
   return json;
 }
 
