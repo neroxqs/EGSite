@@ -27,11 +27,18 @@ async function getImageNFT(){
   var response;
   var json;
 
+  for (let i = 0; i < allIds.length; i++) {
+    response = await fetch(idToURI.get(allIds[i]));
+    json = await response.json();
+    idToImage.set(allIds[]i,json.image);
+  }
+  /*
   allIds.forEach(async function(id){
     response = await fetch(idToURI.get(id));
     json = await response.json();
     idToImage.set(id,json.image);
   });
+  */
 }
 
 // Time format functions
