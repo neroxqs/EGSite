@@ -406,9 +406,9 @@ async function load(){
   window.stakeContract = await loadStakingContract();
   window.manaContract = await loadManaContract();
 
-  await loadTokens();
-  updateMana();
-  updateTotalStakedElfs();
+  //await loadTokens();
+  //updateMana();
+  //updateTotalStakedElfs();
 }
 
 // Onclick functions
