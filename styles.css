@@ -21,6 +21,12 @@ p {
 .navbar{
     background-color: #0000002e;
 }
+
+.text{
+    background-color: #0000004d;
+    padding: 5%;
+    font-stretch: ultra-expanded;
+}
  
 /* --------------------
 BUTTONS
