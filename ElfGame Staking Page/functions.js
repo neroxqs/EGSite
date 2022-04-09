@@ -28,9 +28,14 @@ async function getImageNFT(){
   var json;
 
   for (let i = 0; i < allIds.length; i++) {
-    response = await fetch(idToURI.get(allIds[i]));
-    json = await response.json();
-    idToImage.set(allIds[i],json.image);
+    try{
+      response = await fetch(idToURI.get(allIds[i]));
+      json = await response.json()
+      idToImage.set(allIds[i],json.image);
+    }
+    catch(error) {
+      console.error(error);
+    }
   }
   /*
   allIds.forEach(async function(id){
