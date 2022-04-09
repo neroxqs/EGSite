@@ -358,7 +358,6 @@ async function drawNFT(typeArray, section, staked){
     }
 
     var imageHTML = document.createElement('img');
-    console.log("https://ipfs.io/ipfs/" + idToImage.get(id).substring(7));
     imageHTML.src = "https://ipfs.io/ipfs/" + idToImage.get(id).substring(7);
     imageHTML.id = 'NFTImage';
 
