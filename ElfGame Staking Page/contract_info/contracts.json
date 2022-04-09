@@ -752,7 +752,7 @@
 		"type": "function"
 	}
 ],
-    "stakeContractAddress": "0xf62A7a1cC728d50AC85ce11028D78F4fE043fFfb",
+    "stakeContractAddress": "0xbcd8B4142189998D2A82737b15AE66bB79EbaebF",
 
     "mintContractABI": [
 	{
@@ -1677,7 +1677,7 @@
 		"type": "function"
 	}
 ],
-    "mintContractAddress": "0x3ac0BF1AF69c91f536ff13A2e46eBdf50FbE3d1a",
+    "mintContractAddress": "0x1164961B82717b86F68Fc4813B99Ca7F23a19d2E",
 
     "manaContractABI": [
 	{
@@ -2096,7 +2096,7 @@
 		"type": "function"
 	}
 ],
-    "manaContractAddress": "0x2CA61de6c1136BCea010426b877b87b849f0cEB2",
+    "manaContractAddress": "0xe07Bb30B7a4f0052EDA520aDD596d3F1bb792788",
 
     "wethContractABI": [
 	{
@@ -2386,5 +2386,5 @@
 		"type": "function"
 	}
 ],
-    "wethContractAddress": "0x5aB692ED2E1D14c16C8779088eceB8d521146DB9"
+    "wethContractAddress": "0x3B50c54a9d3Abf80eb784739ca7DE4d512403d61"
 }
