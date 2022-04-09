@@ -281,8 +281,6 @@ async function loadUnstakedElfsOrcs(){
   for (let i = 0; i < array.length; i++) {
     var isOrc = await window.stakeContract.methods.checkIfIsOrc(array[i]).call();
     uri = await window.mintContract.methods.tokenURI(array[i]).call();
-    console.log(array[i]);
-    console.log(uri);
 
     if(!isOrc){
       unstakedElfsArray.push(array[i]);
