@@ -197,7 +197,7 @@ async function rewards() {
 
       var rewardAmountElf = document.getElementById('rewardTokensAmount'+id);
       
-      rewardElf = rewardElf - elf.stolen;
+      rewardElf = (rewardElf - elf.stolen)/(10**18);
 
       totalMana += rewardElf;
 
