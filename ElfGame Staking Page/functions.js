@@ -213,7 +213,7 @@ async function rewards() {
     });
     
     updateTotalElfRewards(totalMana.toFixed(2)); 
-    setTimeout(cycle, minute);
+    setTimeout(cycle, 1000);
   }
 
   cycle();
