@@ -124,6 +124,9 @@
         margin-top: 25%;
        width: 65%;
     }
+    .navbar{
+        background-color: rgba(0, 0, 0, 0.596);
+    }
     .btn-plus {
         padding: 7px 16px !important; 
     }
