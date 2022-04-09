@@ -493,9 +493,9 @@ async function stakeElfs(){
 
   if(arrayChecked.length > 0){
     const accounts = await getAccounts();
-    var json = getContractsJSON();
+    var json = await getContractsJSON();
     
-    var approved = await window.mintContract.methods.isApprovedForAll(accounts[0],json.stakeContractAddres).call();
+    var approved = await window.mintContract.methods.isApprovedForAll(accounts[0], json.stakeContractAddres).call();
     if(approved){
       await window.stakeContract.methods.batchStakeElf(arrayChecked).send({ from: accounts[0] });
 
@@ -528,7 +528,7 @@ async function stakeOrcs(){
 
   if(arrayChecked.length > 0){
     const accounts = await getAccounts();
-    var json = getContractsJSON();
+    var json = await getContractsJSON();
     
     var approved = await window.mintContract.methods.isApprovedForAll(accounts[0],json.stakeContractAddres).call();
     if(approved){
