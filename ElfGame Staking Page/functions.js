@@ -465,6 +465,7 @@ async function ambush() {
     const accounts = await getAccounts();
 
     var cost = await window.stakeContract.methods.ambushCost(arrayChecked[0]).call();
+    cost = web3.utils.toBN(cost);
     await window.stakeContract.methods.ambush(arrayChecked[0]).send({ from: accounts[0], value: cost });
 
     loadTokens();
