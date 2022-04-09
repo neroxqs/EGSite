@@ -209,7 +209,7 @@ async function rewards() {
       var orc = stakedOrcsInfo.get(id)
       var rewardOrc = (manaTaxPerOrc - orc.tax)/(10**18);
 
-      rewardAmountOrc.innerHTML = reward.toFixed(2);
+      rewardAmountOrc.innerHTML = rewardOrc.toFixed(2);
     });
     
     updateTotalElfRewards(totalMana.toFixed(2)); 
