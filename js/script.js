@@ -70,12 +70,10 @@ async function displayWallet() {
             updateAccounts("Your address  : " + accounts[0]);
         }
         else{
+            connectWallet();
             updateAccounts("");
             connectWalletButton.style.visibility = "visible";
         }
-    }
-    else{
-        connectWallet();
     }
 }
 
