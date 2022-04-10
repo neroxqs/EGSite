@@ -1,5 +1,5 @@
 body{
-    background:linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('background.png');
+    background:url('background.png');
     min-height:100%;
     background-size: cover;
     background-repeat: no-repeat;
@@ -7,8 +7,26 @@ body{
     height: 100%;
     width: 100%;
 }
-
-.main{
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #00000050;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgb(53, 53, 53);
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(0, 0, 0);
+  }
+  
+ .main{
      padding-bottom: 5%;
  }
 
@@ -24,7 +42,7 @@ body{
     margin-top: 60px;
     height: 100%;
     color: #fff;
-    background-color: rgba(158, 158, 158, 0.3);
+    background-color: rgba(66, 66, 66, 0.3);
     font-family: 'Roboto', sans-serif;
     /* 300,400,700 */
     font-weight: 700;
@@ -53,22 +71,22 @@ body{
 
 
 #bigSection{
-    
     width: 49%;
     margin: 5px;
     margin-top: 15px;
     text-align: center;
-    background-color: rgba(158, 158, 158, 0.3);
+    background-color: rgba(82, 82, 82, 0.3);
     -webkit-box-shadow: 10px 7px 16px 8px rgba(0,0,0,0.95); 
     box-shadow: 10px 7px 16px 8px rgba(0,0,0,0.95);
     
 }
 
 .UnstakedElfsMainSection, .UnstakedOrcsMainSection, .StakedElfsMainSection, .StakedOrcsMainSection{
+    
+    justify-content: center;
     width: 49%;
     margin: 5px;
     margin-top: 15px;
-    text-align: center;
     background-color: rgba(158, 158, 158, 0.3);
     -webkit-box-shadow: 10px 7px 16px 8px rgba(0,0,0,0.95); 
     box-shadow: 10px 7px 16px 8px rgba(0,0,0,0.95);
@@ -78,15 +96,17 @@ body{
 
 .UnstakedElfsTemporary, .UnstakedOrcsTemporary, .StakedElfsTemporary, .StakedOrcsTemporary{
     display: grid;
-    justify-content: center;
+    justify-content: flex-start;
     flex-wrap: nowrap;
     background-color: rgba(0, 0, 0, .3);
     margin: 5px;
+    padding-left: 5%;
+    padding-right: 5%;
     width: auto;
     height: 210px;
-    overflow: auto;
+    overflow-y: auto !important;
     white-space: nowrap;
-    grid-template-columns: repeat(auto-fit, minmax(127px, max-content));
+    grid-template-columns: repeat(auto-fit, minmax(130px, max-content));
 }
 
 
@@ -110,16 +130,16 @@ body{
 }
 
 .nft{
-    background-color: rgba(255, 255, 255, 0.205);
+    background-color: rgba(255, 255, 255, 0.158);
     color: white;
     float: left;
     margin: 4px;
-    height: 210px;
+    height: 200px;
     width: 130px;
 }
 
 .nft:hover{
-    background-color: rgba(0, 0, 0, 0.106);
+    background-color: rgba(0, 0, 0, 0.555);
     cursor: pointer;
 }
 
@@ -249,7 +269,22 @@ input[type=submit]:active {
     }
 }
 
+@media only screen and (max-width:700px){
+    .UnstakedElfsTemporary, .UnstakedOrcsTemporary, .StakedElfsTemporary, .StakedOrcsTemporary{
+        justify-content: center;
+        margin: 0;
+    }
+    #infoSection{
+        width: 100%;
+    }
+    .mintAndWand{
+        margin-left: 25% ;
+        margin-top: 20%;
+    }
+}
+
 @media only screen and (max-width:575px){
+ 
     .mintAndWand{
         margin-left: 38% ;
         margin-top: 10%;
@@ -257,6 +292,7 @@ input[type=submit]:active {
 }
 
 @media only screen and (max-width:470px){
+  
     .mintAndWand{
         margin-left: 35% ;
         margin-top: 10%;
@@ -275,6 +311,7 @@ input[type=submit]:active {
 }
 
 @media (max-width: 575.98px) and (max-width: 767.98px){
+ 
     body{
         height: 100%;
         width: 100vh;
@@ -301,6 +338,9 @@ input[type=submit]:active {
 }
 
 @media only screen and (max-width:391px) {
+    .UnstakedElfsTemporary, .UnstakedOrcsTemporary, .StakedElfsTemporary, .StakedOrcsTemporary{
+        justify-content: center;
+    }
    
     body{
         height: 100%;
