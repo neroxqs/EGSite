@@ -196,7 +196,7 @@ async function rewards() {
     totalMana = 0;
     manaTaxPerOrc = await window.stakeContract.methods.manaTaxPerOrc().call()
 
-    await stakedElfsArray.forEach(async function(id){
+    stakedElfsArray.forEach(async function(id){
       var elf = stakedElfsInfo.get(id);
       var rewardElf = await window.stakeContract.methods.calculateReward(elf).call();
 
@@ -207,9 +207,9 @@ async function rewards() {
       totalMana += rewardElf;
 
       rewardAmountElf.innerHTML = rewardElf.toFixed(2);
+      
+      updateTotalElfRewards(totalMana.toFixed(2));
     });
-    
-    updateTotalElfRewards(totalMana.toFixed(2));
 
     stakedOrcsArray.forEach(function(id){
       var rewardAmountOrc = document.getElementById('rewardTokensAmount'+id);
