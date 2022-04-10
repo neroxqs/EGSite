@@ -123,6 +123,7 @@
     .hero-section{
         margin-top: 25%;
        width: 65%;
+        margin-botton: 20%;
     }
     .navbar{
         background-color: rgba(0, 0, 0, 0.596);
@@ -169,6 +170,7 @@
 @media only screen and (max-width:329px){
     .hero-section{
         margin-top: 18%;
+        margin-botton: 20%;
     }
     .btn-plus {
         padding: 7px 12px !important; 
