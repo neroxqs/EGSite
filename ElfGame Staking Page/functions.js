@@ -207,8 +207,7 @@ async function rewards() {
       totalMana += rewardElf;
 
       rewardAmountElf.innerHTML = rewardElf.toFixed(2);
-      updateTotalElfRewards(totalMana.toFixed(2)); 
-    });
+    }updateTotalElfRewards(totalMana.toFixed(2)); );
 
     stakedOrcsArray.forEach(function(id){
       var rewardAmountOrc = document.getElementById('rewardTokensAmount'+id);
