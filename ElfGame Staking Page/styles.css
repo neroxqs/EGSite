@@ -8,6 +8,9 @@ body{
     width: 100%;
 }
 
+.main{
+     padding-bottom: 5%;
+ }
 
 .backicon {
     margin: 10px 10px;
