@@ -2,16 +2,15 @@ function isMobileDevice() {
     return 'ontouchstart' in window || 'onmsgesturechange' in window;
 }
 
-async function connectWallet() {
+async function connectWalletMobile() {
     if (isMobileDevice()) {
         const metamaskAppDeepLink = "https://metamask.app.link/dapp/elfgame.app/index.html";
         window.location.href = metamaskAppDeepLink;
     }
-    else{
-        await ethereum.request({ method: 'eth_requestAccounts' });
-    }
+}
 
-    displayWallet();
+async function connectWalletDesktop() {
+    await ethereum.request({ method: 'eth_requestAccounts' });
 }
 
 async function goToStakingPage() {
@@ -60,20 +59,26 @@ async function checkNetwork() {
 }
 
 async function displayWallet() {
+    const connectWalletButton = document.getElementById('connect');
+    var accounts = await getAccounts();
+
+    if(accounts.length>0){
+        connectWalletButton.style.visibility = "hidden";
+
+        updateAccounts("Your address  : " + accounts[0]);
+    }
+    else{
+        updateAccounts("");
+        connectWalletButton.style.visibility = "visible";
+    }
+}
+
+async function checkIfWalletIsConnected() {
     if(window.ethereum){
-        const connectWalletButton = document.getElementById('connect');
-        var accounts = await getAccounts();
-
-        if(accounts.length>0){
-            connectWalletButton.style.visibility = "hidden";
-
-            updateAccounts("Your address  : " + accounts[0]);
-        }
-        else{
-            connectWallet();
-            updateAccounts("");
-            connectWalletButton.style.visibility = "visible";
-        }
+        connectWalletDesktop();
+    } 
+    else{
+        connectWalletMobile();
     }
 }
 
