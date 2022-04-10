@@ -197,17 +197,18 @@ async function rewards() {
     manaTaxPerOrc = await window.stakeContract.methods.manaTaxPerOrc().call()
     
     for (let i = 0; i < stakedElfsArray.length; i++) {
-      var elf = stakedElfsInfo.get(id);
+      var elf = stakedElfsInfo.get(stakedElfsArray[i]);
       var rewardElf = await window.stakeContract.methods.calculateReward(elf).call();
 
-      var rewardAmountElf = document.getElementById('rewardTokensAmount'+id);
+      var rewardAmountElf = document.getElementById('rewardTokensAmount'+stakedElfsArray[i]);
       
       rewardElf = (rewardElf - elf.stolen)/(10**18);
-
+      
+      rewardAmountElf.innerHTML = rewardElf.toFixed(2);
+      
       totalMana += rewardElf;
     }
     
-    rewardAmountElf.innerHTML = rewardElf.toFixed(2);
     updateTotalElfRewards(totalMana.toFixed(2));
     
     /*
