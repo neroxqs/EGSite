@@ -146,6 +146,7 @@
 @media only screen and (max-width:360px) {
    .hero-section{
       margin-top:27%;
+      margin-botton: 20%;
    }
     .btn-plus {
         padding: 7px 14px !important; 
