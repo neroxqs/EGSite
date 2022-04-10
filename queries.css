@@ -136,6 +136,10 @@
     .hero-text-box p{
         font-size: 15px;
     }
+   .main-footer {
+        font-size: 30px;
+        margin-top: 20px;
+    }
     .btn:link,
     .btn:visited,
     input[type=submit]{
