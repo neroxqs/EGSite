@@ -74,6 +74,9 @@ async function displayWallet() {
             connectWalletButton.style.visibility = "visible";
         }
     }
+    else{
+        connectWallet();
+    }
 }
 
 displayWallet();
