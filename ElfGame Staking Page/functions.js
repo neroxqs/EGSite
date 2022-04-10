@@ -191,48 +191,30 @@ async function rewards() {
   var minute = 60000;
   var totalMana;
   var manaTaxPerOrc;
+  var allStakedIds = stakedElfsArray.concat(stakedOrcsArray);
  
   async function cycle(){
     totalMana = 0;
-    manaTaxPerOrc = await window.stakeContract.methods.manaTaxPerOrc().call()
+    manaTaxPerOrc = await window.stakeContract.methods.manaTaxPerOrc().call();
     
-    for (let i = 0; i < stakedElfsArray.length; i++) {
-      var elf = stakedElfsInfo.get(stakedElfsArray[i]);
-      var rewardElf = await window.stakeContract.methods.calculateReward(elf).call();
+    allStakedIds.forEach(async function(id){
+      if(stakedElfsArray.includes(id)){
+        var elf = stakedElfsInfo.get(id);
+        var rewardElf = await window.stakeContract.methods.calculateReward(elf).call();
+        var rewardAmountElf = document.getElementById('rewardTokensAmount'+id);
+        
+        rewardElf = (rewardElf - elf.stolen)/(10**18);
+        totalMana += rewardElf;
+        rewardAmountElf.innerHTML = rewardElf.toFixed(2);
+        updateTotalElfRewards(totalMana.toFixed(2));
+      }
+      else if(stakedOrcsArray.includes(id)){
+        var rewardAmountOrc = document.getElementById('rewardTokensAmount'+id);
+        var orc = stakedOrcsInfo.get(id)
+        var rewardOrc = (manaTaxPerOrc - orc.tax)/(10**18);
 
-      var rewardAmountElf = document.getElementById('rewardTokensAmount'+stakedElfsArray[i]);
-      
-      rewardElf = (rewardElf - elf.stolen)/(10**18);
-      
-      rewardAmountElf.innerHTML = rewardElf.toFixed(2);
-      
-      totalMana += rewardElf;
-    }
-    
-    updateTotalElfRewards(totalMana.toFixed(2));
-    
-    /*
-    stakedElfsArray.forEach(async function(id){
-      var elf = stakedElfsInfo.get(id);
-      var rewardElf = await window.stakeContract.methods.calculateReward(elf).call();
-
-      var rewardAmountElf = document.getElementById('rewardTokensAmount'+id);
-      
-      rewardElf = (rewardElf - elf.stolen)/(10**18);
-
-      totalMana += rewardElf;
-
-      rewardAmountElf.innerHTML = rewardElf.toFixed(2);
-      updateTotalElfRewards(totalMana.toFixed(2));
-    });
-    */
-
-    stakedOrcsArray.forEach(function(id){
-      var rewardAmountOrc = document.getElementById('rewardTokensAmount'+id);
-      var orc = stakedOrcsInfo.get(id)
-      var rewardOrc = (manaTaxPerOrc - orc.tax)/(10**18);
-
-      rewardAmountOrc.innerHTML = rewardOrc.toFixed(2);
+        rewardAmountOrc.innerHTML = rewardOrc.toFixed(2);
+      }
     });
     
     setTimeout(cycle, 1000);
@@ -393,6 +375,7 @@ async function drawNFT(typeArray, section, staked){
       var rewardAmount = document.createElement('p');
       rewardAmount.id = "rewardTokensAmount"+id;
       rewardAmount.className = "rewardTokensAmountClass";
+      rewardAmount.innerHTML = '0';
 
       var timeParagraph = document.createElement('p');
       timeParagraph.className = 'timestampParagraph';
