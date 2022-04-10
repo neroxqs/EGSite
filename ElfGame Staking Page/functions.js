@@ -207,6 +207,7 @@ async function rewards() {
       totalMana += rewardElf;
 
       rewardAmountElf.innerHTML = rewardElf.toFixed(2);
+      updateTotalElfRewards(totalMana.toFixed(2)); 
     });
 
     stakedOrcsArray.forEach(function(id){
@@ -217,7 +218,6 @@ async function rewards() {
       rewardAmountOrc.innerHTML = rewardOrc.toFixed(2);
     });
     
-    updateTotalElfRewards(totalMana.toFixed(2)); 
     setTimeout(cycle, 1000);
   }
 
