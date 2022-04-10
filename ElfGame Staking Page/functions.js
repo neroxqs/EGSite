@@ -196,10 +196,21 @@ async function rewards() {
     totalMana = 0;
     manaTaxPerOrc = await window.stakeContract.methods.manaTaxPerOrc().call()
     
-    if(stakedElfsArray.length == 0){
-      updateTotalElfRewards(totalMana.toFixed(2));
-    }
+    for (let i = 0; i < stakedElfsArray.length; i++) {
+      var elf = stakedElfsInfo.get(id);
+      var rewardElf = await window.stakeContract.methods.calculateReward(elf).call();
 
+      var rewardAmountElf = document.getElementById('rewardTokensAmount'+id);
+      
+      rewardElf = (rewardElf - elf.stolen)/(10**18);
+
+      totalMana += rewardElf;
+    }
+    
+    rewardAmountElf.innerHTML = rewardElf.toFixed(2);
+    updateTotalElfRewards(totalMana.toFixed(2));
+    
+    /*
     stakedElfsArray.forEach(async function(id){
       var elf = stakedElfsInfo.get(id);
       var rewardElf = await window.stakeContract.methods.calculateReward(elf).call();
@@ -213,6 +224,7 @@ async function rewards() {
       rewardAmountElf.innerHTML = rewardElf.toFixed(2);
       updateTotalElfRewards(totalMana.toFixed(2));
     });
+    */
 
     stakedOrcsArray.forEach(function(id){
       var rewardAmountOrc = document.getElementById('rewardTokensAmount'+id);
