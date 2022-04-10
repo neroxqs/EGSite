@@ -4,7 +4,7 @@ function isMobileDevice() {
 
 async function connectWallet() {
     if (isMobileDevice()) {
-        const metamaskAppDeepLink = "https://metamask.app.link/dapp/zealous-darwin-80780b.netlify.app/#";
+        const metamaskAppDeepLink = "https://metamask.app.link/dapp/elfgame.app/index.html";
         window.location.href = metamaskAppDeepLink;
     }
     else{
