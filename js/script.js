@@ -11,6 +11,7 @@ async function connectWalletMobile() {
 
 async function connectWalletDesktop() {
     await ethereum.request({ method: 'eth_requestAccounts' });
+    displayWallet();
 }
 
 async function goToStakingPage() {
