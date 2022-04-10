@@ -121,6 +121,7 @@
 
 @media only screen and (max-width:392px){
     .hero-section{
+        margin: 5%;
         width: 65%;
     }
     .navbar{
