@@ -128,7 +128,6 @@ async function displayWallet() {
     var accounts = await getAccounts();
 
     if(accounts.length>0){
-        displayMintedAmount();
         connectWalletButton.style.visibility = "hidden";
 
         updateAccounts("Your address  : " + accounts[0]);
