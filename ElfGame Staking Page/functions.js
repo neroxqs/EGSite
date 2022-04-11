@@ -603,24 +603,58 @@ async function selectAllElfsStake(){
 }
 
 async function selectAllOrcsStake(){
-  unstakedOrcsArray.forEach(function(id){
-    var nft = document.getElementById("nft" + id);
-    nft.className = 'selected';
-  });
+  var button = document.getElementById("selectUnstakedOrcs");
+  
+  if(button.innerHTML == "Select all"){
+    unstakedOrcsArray.forEach(function(id){
+      var nft = document.getElementById("nft" + id);
+      nft.className = 'selected';
+    });
+    button.innerHTML = "Deselect all";
+  }
+  else if(button.innerHTML == "Deselect all"){
+    unstakedOrcsArray.forEach(function(id){
+      var nft = document.getElementById("nft" + id);
+      nft.className = 'nft';
+    });
+    button.innerHTML = "Select all";
+  }
 }
 
 async function selectAllElfsUnstake(){
-  stakedElfsArray.forEach(function(id){
-    var nft = document.getElementById("nft" + id);
-    nft.className = 'selected';
-  });
+  var button = document.getElementById("selectStakedElfs");
+  
+  if(button.innerHTML == "Select all"){
+    stakedElfsArray.forEach(function(id){
+      var nft = document.getElementById("nft" + id);
+      nft.className = 'selected';
+    });
+  }
+  else if(button.innerHTML == "Deselect all"){
+    stakedElfsArray.forEach(function(id){
+      var nft = document.getElementById("nft" + id);
+      nft.className = 'nft';
+    });
+    button.innerHTML = "Select all";
+  }
 }
 
 async function selectAllOrcsUnstake(){
-  stakedOrcsArray.forEach(function(id){
-    var nft = document.getElementById("nft" + id);
-    nft.className = 'selected';
-  });
+  var button = document.getElementById("selectStakedElfs");
+  
+  if(button.innerHTML == "Select all"){
+    stakedOrcsArray.forEach(function(id){
+      var nft = document.getElementById("nft" + id);
+      nft.className = 'selected';
+    });
+  }
+  else if(button.innerHTML == "Deselect all"){
+    stakedOrcsArray.forEach(function(id){
+      var nft = document.getElementById("nft" + id);
+      nft.className = 'nft';
+    });
+    button.innerHTML = "Select all";
+  }
 }
 
 async function claimElfRewards(){
