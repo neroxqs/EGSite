@@ -113,6 +113,7 @@
     .hero-section{
         margin-top: 10%;
         width: 65%;
+       font-family: 'Roboto', sans-serif;
     }
     .btn-plus {
         padding: 7px 20px !important; 
@@ -130,6 +131,7 @@
     .hero-section{
         margin-top: 15%;
         width: 65%;
+       font-family: 'Roboto', sans-serif;
     }
     .navbar{
         background-color: rgba(0, 0, 0, 0.596);
