@@ -1,3 +1,66 @@
+function displayMintedAmount(){
+  var amount;
+  var paragraph = document.getElementById('mintedAmount');
+  
+  async function cycle(){
+    amount = await window.mintContract.methods.minted().call();
+   
+    paragraph.innerHTML = amount + '/12200';
+    
+    setTimeout(cycle, 60000);
+  }
+
+  cycle();
+}
+
+async function mintWithMana(){
+  var numberBox = document.getElementById("mintAmount");
+  var json = await getContractsJSON();
+  const accounts = await getAccounts();
+  
+  var tokens = await window.manaContract.methods.tokensLeft().call();
+  console.log(tokens);
+
+  //const price = await window.mintContract.methods.manaPrice(numberBox.value);
+  const price = web3.utils.toBN((100*10**18)*numberBox.value);
+
+  await window.manaContract.methods.approve(json.mintContractAddress, price).send({ from: accounts[0] });
+  await window.mintContract.methods.buyWithMana(numberBox.value).send({ from: accounts[0] });
+}
+
+async function mintWithEthereum(){
+  var numberBox = document.getElementById("mintAmountEth");
+  var json = await getContractsJSON();
+  const accounts = await getAccounts();
+
+  const price = await window.mintContract.methods.minthEthCost().call();
+  price = web3.utils.toBN(price * numberBox.value);
+
+  await window.wethContract.methods.approve(json.stakeContractAddress, price).send({ from: accounts[0] });
+  await window.mintContract.methods.publicSale(numberBox.value).send({ from: accounts[0] });
+}
+
+async function getContractsJSON() {
+  const response = await fetch("./ElfGame Staking Page/contract_info/contracts.json");
+  const json = await response.json();
+  return json;
+}
+
+async function loadMintingContract() {
+  var json = await getContractsJSON();
+  return await new web3.eth.Contract(json.mintContractABI, json.mintContractAddress);
+}
+
+async function loadManaContract() {
+  var json = await getContractsJSON();
+  return await new web3.eth.Contract(json.manaContractABI, json.manaContractAddress);
+}
+
+async function loadWethContract() {
+  var json = await getContractsJSON();
+  return await new web3.eth.Contract(json.wethContractABI, json.wethContractAddress);
+}
+
 function isMobileDevice() {
     return 'ontouchstart' in window || 'onmsgesturechange' in window;
 }
@@ -47,7 +110,6 @@ async function updateAccounts(newText) {
 }
 
 async function checkNetwork() {
-    window.web3 = new Web3(window.ethereum);
     web3.eth.net.getId().then(async function(networkId) {
         if (networkId != 137) {
             alert("Not on Matic Mainnet.");
@@ -60,13 +122,28 @@ async function checkNetwork() {
 }
 
 async function displayWallet() {
+    window.web3 = new Web3(window.ethereum);
+    const mintDiv = document.getElementsByClassName('mintDiv');
     const connectWalletButton = document.getElementById('connect');
     var accounts = await getAccounts();
 
     if(accounts.length>0){
+        displayMintedAmount();
         connectWalletButton.style.visibility = "hidden";
 
         updateAccounts("Your address  : " + accounts[0]);
+        
+        window.mintContract = await loadMintingContract();
+        window.manaContract = await loadManaContract();
+        window.wethContract = await loadWethContract();
+        
+        if (mintDiv.style.display === "none") {
+            mintDiv.style.display = "block";
+        } else {
+            mintDiv.style.display = "none";
+        }
+        
+        displayMintedAmount();
     }
     else{
         updateAccounts("");
