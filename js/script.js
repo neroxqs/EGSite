@@ -19,7 +19,6 @@ async function mintWithMana(){
   const accounts = await getAccounts();
   
   var tokens = await window.manaContract.methods.tokensLeft().call();
-  console.log(tokens);
 
   //const price = await window.mintContract.methods.manaPrice(numberBox.value);
   const price = web3.utils.toBN((100*10**18)*numberBox.value);
