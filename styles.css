@@ -34,8 +34,8 @@ p {
 }
 
 .mintDiv{
-    background-color: aqua;
     visibility: visible;
+    width: 75%;
 }
 
 .navbar{
