@@ -39,7 +39,7 @@
     }
 
     .walletResponsive {
-        position: sticky
+        position: sticky;
         display: block;
         color: #fff;
         top: 95%;
