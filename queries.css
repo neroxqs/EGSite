@@ -32,6 +32,11 @@
     .walletAddress {
         display: none;
     }
+   .hero-section{
+        margin-top: 8%;
+        width: 65%;
+       font-family: 'Roboto', sans-serif;
+    }
 
     .walletResponsive {
         position: absolute;
@@ -43,6 +48,11 @@
 }
 
 @media only screen and (max-width:740px){
+   .hero-section{
+        margin-top: 8%;
+        width: 65%;
+       font-family: 'Roboto', sans-serif;
+    }
     .hero-text-box h1 {
         font-size: 40px;
     }
@@ -52,12 +62,22 @@
 }
 
 @media only screen and (max-width:700px) {
+   .hero-section{
+        margin-top: 8%;
+        width: 65%;
+       font-family: 'Roboto', sans-serif;
+    }
     .btn-plus {
         padding: 10px 40px !important; 
     }
 }
 
 @media only screen and (max-width:580px){
+   .hero-section{
+        margin-top: 8%;
+        width: 65%;
+       font-family: 'Roboto', sans-serif;
+    }
     .btn-full:link,
     .btn-full:visited,
     input[type=submit]{
@@ -77,6 +97,11 @@
 }
 
 @media only screen and (max-width:520px){
+   .hero-section{
+        margin-top: 8%;
+        width: 65%;
+       font-family: 'Roboto', sans-serif;
+    }
     .btn-plus {
         padding: 10px 30px !important; 
     }
@@ -90,6 +115,11 @@
 }
 
 @media only screen and (max-width:480px) {
+   .hero-section{
+        margin-top: 8%;
+        width: 65%;
+       font-family: 'Roboto', sans-serif;
+    }
     .btn-plus {
         padding: 8px 25px !important; 
     }
