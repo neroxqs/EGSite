@@ -136,7 +136,7 @@ async function displayWallet() {
         window.manaContract = await loadManaContract();
         window.wethContract = await loadWethContract();
         
-        mintDiv[0].style.visibility = "visible"
+        mintDiv[0].style.visibility = "visible";
         
         displayMintedAmount();
     }
