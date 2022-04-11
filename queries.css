@@ -86,17 +86,13 @@
     }
 }
 
-@media only screen and (max-width:520px){
-   .hero-section{
-        margin-top: 8%;
-        width: 65%;
-       font-family: 'Roboto', sans-serif;
-    }
+@media only screen and (max-width:530px){
+  
     .btn-plus {
         padding: 10px 25px !important; 
     }
     .hero-text-box h1 {
-        font-size: 30px;
+        font-size: 25px;
     }
 
     .hero-text-box p{
