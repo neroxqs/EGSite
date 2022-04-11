@@ -32,6 +32,10 @@
     .walletAddress {
         display: none;
     }
+   .hero-section{
+      top:50%;
+      left:50%;
+   }
  
     .hero-text-box h1 {
         font-size: 40px;
