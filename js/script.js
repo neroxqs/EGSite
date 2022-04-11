@@ -136,16 +136,13 @@ async function displayWallet() {
         window.manaContract = await loadManaContract();
         window.wethContract = await loadWethContract();
         
-        if (mintDiv[0].style.visibility == "hidden") {
-            mintDiv[0].style.visibility = "visible"
-        } else {
-            mintDiv[0].style.visibility = "hidden";
-        }
+        mintDiv[0].style.visibility = "visible"
         
         displayMintedAmount();
     }
     else{
         updateAccounts("");
+        mintDiv[0].style.visibility = "hidden";
         connectWalletButton.style.visibility = "visible";
     }
 }
