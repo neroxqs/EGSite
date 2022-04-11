@@ -586,7 +586,7 @@ async function unstakeOrcs(){
 async function selectAllElfsStake(){
   var button = document.getElementById("selectUnstakedElfs");
   
-  if(button.innerHTML == "Select all");{
+  if(button.innerHTML == "Select all"){
     unstakedElfsArray.forEach(function(id){
       var nft = document.getElementById("nft" + id);
       nft.className = 'selected';
