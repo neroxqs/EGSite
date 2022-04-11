@@ -47,6 +47,8 @@ p {
     background-color: #0000007e;
     padding: 5%;
     font-stretch: ultra-expanded;
+    -webkit-box-shadow: 10px 7px 16px 8px rgba(0, 0, 0, 0); 
+    box-shadow: 10px 7px 16px 8px rgba(0, 0, 0, 0.63);
 }
  
 /* --------------------
