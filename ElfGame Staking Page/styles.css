@@ -1,5 +1,5 @@
 body{
-    background:url('background.png');
+    background:url('background.jpg');
     min-height:100%;
     background-size: cover;
     background-repeat: no-repeat;
@@ -18,12 +18,12 @@ body{
   
   /* Handle */
   ::-webkit-scrollbar-thumb {
-    background: rgb(53, 53, 53);
+    background: rgb(0, 0, 0);
   }
   
   /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover {
-    background: rgb(0, 0, 0);
+    background: rgba(20, 13, 13, 0.699);
   }
   
  .main{
@@ -39,29 +39,28 @@ body{
 }
 
 #infoSection{
+    border: rgba(0, 0, 0, 0.74) 1px solid;
     margin-top: 60px;
     height: 100%;
     color: #fff;
-    background-color: rgba(66, 66, 66, 0.3);
+    background-color: rgba(34, 34, 34, 0.3);
     font-family: 'Roboto', sans-serif;
     /* 300,400,700 */
     font-weight: 700;
 }
 
 .mintAndWand{
-    /* margin-left: 40%;
-    margin-top: 15%; */
-    margin-left: 15%;
-}
-#amountMintDiv{
-    width: auto;
-    margin-top: 12%;  
-    float: left;
+    text-align: right;
+    margin-top: 60px;
+    
 }
 
-.buttonMint{
-    margin-top: 10%;
-    padding: 0;
+
+#mintDiv p{
+    font-family: 'Roboto', sans-serif;
+    color: rgb(255, 255, 255);
+    margin-top: 2%;
+    padding-left: 4%;
 }
 
 #mintAmount{
@@ -70,12 +69,17 @@ body{
 }
 
 
+
+
+
+
 #bigSection{
+   
     width: 49%;
     margin: 5px;
     margin-top: 15px;
     text-align: center;
-    background-color: rgba(82, 82, 82, 0.3);
+    background-color: rgba(43, 43, 43, 0.507);
     -webkit-box-shadow: 10px 7px 16px 8px rgba(0,0,0,0.95); 
     box-shadow: 10px 7px 16px 8px rgba(0,0,0,0.95);
     
@@ -87,7 +91,7 @@ body{
     width: 49%;
     margin: 5px;
     margin-top: 15px;
-    background-color: rgba(158, 158, 158, 0.3);
+    background-color: rgba(0, 0, 0, 0);
     -webkit-box-shadow: 10px 7px 16px 8px rgba(0,0,0,0.95); 
     box-shadow: 10px 7px 16px 8px rgba(0,0,0,0.95);
 }
@@ -96,12 +100,9 @@ body{
 
 .UnstakedElfsTemporary, .UnstakedOrcsTemporary, .StakedElfsTemporary, .StakedOrcsTemporary{
     display: grid;
-    justify-content: flex-start;
     flex-wrap: nowrap;
-    background-color: rgba(0, 0, 0, .3);
+    background-color: rgba(0, 0, 0, 0);
     margin: 5px;
-    padding-left: 5%;
-    padding-right: 5%;
     width: auto;
     height: 210px;
     overflow-y: auto !important;
@@ -182,7 +183,7 @@ BUTTONS
 .btn:visited,
 input[type=submit]{
     display: inline-block;
-    padding: 20px 40px;
+    padding: 10px 40px;
     font-weight: 400;
     text-decoration: none;
     border-radius: 100px;
@@ -270,10 +271,6 @@ input[type=submit]:active {
 }
 
 @media only screen and (max-width:700px){
-    .UnstakedElfsTemporary, .UnstakedOrcsTemporary, .StakedElfsTemporary, .StakedOrcsTemporary{
-        justify-content: center;
-        margin: 0;
-    }
     #infoSection{
         width: 100%;
     }
@@ -338,9 +335,6 @@ input[type=submit]:active {
 }
 
 @media only screen and (max-width:391px) {
-    .UnstakedElfsTemporary, .UnstakedOrcsTemporary, .StakedElfsTemporary, .StakedOrcsTemporary{
-        justify-content: center;
-    }
    
     body{
         height: 100%;
