@@ -137,7 +137,7 @@ async function displayWallet() {
         window.manaContract = await loadManaContract();
         window.wethContract = await loadWethContract();
         
-        if (mintDiv[0].style.display == "none") {
+        if (mintDiv[0].style.display === "none") {
             mintDiv[0].style.display = "block";
         } else {
             mintDiv[0].style.display = "none";
