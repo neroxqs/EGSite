@@ -12,12 +12,13 @@
     <title>Elf Game</title>
 </head>
 <body>
-  <video autoplay loop muted playsinline id="myVideo" src="video.mp4"></video>
-      <script>
-          import enableInlineVideo from 'iphone-inline-video';
-     var video = document.querySelector('myVideo');
-      enableInlineVideo(video);
+     <script>
+          var enableInlineVideo = require('iphone-inline-video');
+            var video = document.querySelector('myVideo');
+            enableInlineVideo(video);
     </script>
+  <video autoplay loop muted playsinline id="myVideo" src="video.mp4"></video>
+     
     
     <header>
       
