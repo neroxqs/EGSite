@@ -158,6 +158,7 @@ nav {
 }
 
 .walletResponsive{
+    bottom: 5px;
     display: none;
 }
 
