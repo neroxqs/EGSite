@@ -7,6 +7,16 @@ REUSABLE COMPONENTS
      pointer-events: none;
      width: 5px;
  }
+ body{
+    background:url('img/backgroundimgopacity.jpg');
+   
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 100vh;
+    width: 100%;
+ }
+
 h1 {
     text-transform: uppercase;
     font-weight: 500;
