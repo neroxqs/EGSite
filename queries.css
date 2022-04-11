@@ -125,8 +125,7 @@
         font-size: 15px;
     }
      .walletResponsive{
-        height: auto;
-        padding-bottom: 10%;
+        top: 90%;
     }
 }
 
@@ -154,8 +153,7 @@
         margin-top: 20px;
     }
     .walletResponsive{
-       height: auto;
-        padding-bottom: 10%;
+       top: 90%;
     }
     .btn:link,
     .btn:visited,
@@ -185,8 +183,7 @@
         font-size: 13px;
     }
     .walletResponsive{
-       height: auto;
-        padding-bottom: 10%;
+       top: 90%;
     }
 }
 
