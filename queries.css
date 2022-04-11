@@ -33,8 +33,8 @@
         display: none;
     }
    .hero-section{
-      top:50%;
-      left:50%;
+      display: absolute;
+      top:60%;
    }
  
     .hero-text-box h1 {
