@@ -32,10 +32,13 @@
     .walletAddress {
         display: none;
     }
-   .hero-section{
-        top: 15%;
+     .hero-section{
+        margin-top: 8%;
         width: 65%;
        font-family: 'Roboto', sans-serif;
+    }
+    .hero-text-box h1 {
+        font-size: 40px;
     }
 
     .walletResponsive {
