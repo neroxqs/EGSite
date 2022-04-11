@@ -584,10 +584,22 @@ async function unstakeOrcs(){
 }
 
 async function selectAllElfsStake(){
-  unstakedElfsArray.forEach(function(id){
-    var nft = document.getElementById("nft" + id);
-    nft.className = 'selected';
-  });
+  var button = document.getElementById("selectUnstakedElfs");
+  
+  if(button.innerHTML == "Select all");{
+    unstakedElfsArray.forEach(function(id){
+      var nft = document.getElementById("nft" + id);
+      nft.className = 'selected';
+    });
+    button.innerHTML = "Deselect all";
+  }
+  else if(button.innerHTML == "Deselect all"){
+    unstakedElfsArray.forEach(function(id){
+      var nft = document.getElementById("nft" + id);
+      nft.className = 'nft';
+    });
+    button.innerHTML = "Select all";
+  }
 }
 
 async function selectAllOrcsStake(){
