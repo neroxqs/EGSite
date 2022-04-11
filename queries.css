@@ -124,6 +124,9 @@
     .hero-text-box p{
         font-size: 15px;
     }
+    .walletFooter{
+        padding-bottom: 5%;
+    }
 }
 
 
@@ -148,6 +151,9 @@
    .main-footer {
         font-size: 30px;
         margin-top: 20px;
+    }
+    .walletFooter{
+        padding-bottom: 5%;
     }
     .btn:link,
     .btn:visited,
