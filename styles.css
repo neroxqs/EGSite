@@ -44,6 +44,7 @@ p {
 }
 
 .text{
+    background-color: #0000007e;
     padding: 5%;
     font-stretch: ultra-expanded;
 }
@@ -116,7 +117,7 @@ SECTIONS
 } */
 
 .hero-section{
-    padding-top: 2%;
+    padding-top: 10%;
     width:70%;
     position: absolute;
     top: 50%;
@@ -124,7 +125,7 @@ SECTIONS
     transform: translate(-50%, -50%);
     -webkit-box-shadow: 10px 7px 16px 8px rgba(0, 0, 0, 0); 
     box-shadow: 10px 7px 16px 8px rgba(0, 0, 0, 0.63);
-    background-color: #0000007e;
+   
 }
 
 .hero-text-box {
