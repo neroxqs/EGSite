@@ -424,6 +424,7 @@ async function load(){
   window.mintContract = await loadMintingContract();
   window.stakeContract = await loadStakingContract();
   window.manaContract = await loadManaContract();
+  window.wethContract = await loadWethContract();
 
   displayMintedAmount();
   await loadTokens();
