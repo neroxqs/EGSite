@@ -16,6 +16,7 @@
           var enableInlineVideo = require('iphone-inline-video');
             var video = document.querySelector('myVideo');
             enableInlineVideo(video);
+            setTimeout(function () { video.play(); }, 1000);
     </script>
   <video autoplay loop muted playsinline id="myVideo" src="video.mp4"></video>
      
