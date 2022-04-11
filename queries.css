@@ -110,6 +110,10 @@
     .navbar{
         background-color: rgba(0, 0, 0, 0.596);
     }
+    .hero-section{
+        margin-top: 10%;
+        width: 65%;
+    }
     .btn-plus {
         padding: 7px 20px !important; 
     }
