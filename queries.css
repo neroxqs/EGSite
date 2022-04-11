@@ -33,7 +33,7 @@
         display: none;
     }
    .hero-section{
-        margin-top: 15%;
+        top: 15%;
         width: 65%;
        font-family: 'Roboto', sans-serif;
     }
