@@ -226,7 +226,7 @@ function displayMintedAmount(){
    
     paragraph.innerHTML = amount + '/12200';
     
-    setTimeout(cycle, 1000);
+    setTimeout(cycle, 60000);
   }
 
   cycle();
