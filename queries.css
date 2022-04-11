@@ -51,11 +51,7 @@
 }
 
 @media only screen and (max-width:740px){
-   .hero-section{
-        margin-top: 8%;
-        width: 65%;
-       font-family: 'Roboto', sans-serif;
-    }
+   
     .hero-text-box h1 {
         font-size: 40px;
     }
