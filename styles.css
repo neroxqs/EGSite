@@ -34,8 +34,8 @@ p {
 }
 
 .mintDiv{
+ display: inline-block;
     visibility: hidden;
-  justify-content: center;
 }
 
 .navbar{
