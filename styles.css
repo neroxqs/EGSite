@@ -34,7 +34,7 @@ p {
 }
 
 .mintDiv{
-    visibility: visible;
+    visibility: hidden;
     width: 75%;
     float: left;
 }
@@ -165,4 +165,8 @@ nav {
 .main-footer .footer-icon {
     margin-left: 20px;
     color: #fff;
+}
+
+#connect{
+   visibility: hidden;
 }
