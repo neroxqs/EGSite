@@ -28,7 +28,7 @@
     }
 }
 
-@media only screen and (max-width:991px) and (max-width:740px){
+@media only screen and (max-width:991px){
     .walletAddress {
         display: none;
     }
@@ -49,16 +49,17 @@
 @media only screen and (max-width:740px){
    
     .hero-text-box h1 {
-        font-size: 35px;
+        font-size: 30px;
     }
     .btn-plus {
         padding: 8px 55px !important; 
     }
+   
 }
 
 @media only screen and (max-width:700px) {
     .hero-text-box h1 {
-        font-size: 35px;
+        font-size: 30px;
     }
     .btn-plus {
         padding: 10px 40px !important; 
@@ -74,7 +75,7 @@
     }
 
     .hero-text-box h1 {
-        font-size: 30px;
+        font-size: 25px;
     }
 
     .hero-text-box p{
@@ -95,7 +96,7 @@
         padding: 10px 25px !important; 
     }
     .hero-text-box h1 {
-        font-size: 35px;
+        font-size: 25px;
     }
 
     .hero-text-box p{
