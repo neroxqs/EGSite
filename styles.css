@@ -35,6 +35,8 @@ p {
 
 .mintDiv{
     display: absolute;
+    left:50%;
+ right: 50%;
     visibility: hidden;
 }
 
