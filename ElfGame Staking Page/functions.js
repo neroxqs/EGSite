@@ -219,7 +219,7 @@ async function rewards() {
 
 function displayMintedAmount(){
   var amount;
-  var paragraph = documents.getElementById('mintedAmount');
+  var paragraph = document.getElementById('mintedAmount');
   
   async function cycle(){
     amount = await window.mintContract.methods.minted().call();
