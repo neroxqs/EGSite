@@ -367,10 +367,14 @@ async function drawNFT(typeArray, section, staked){
     var imageHTML = document.createElement('img');
     imageHTML.src = "https://ipfs.io/ipfs/" + idToImage.get(id).substring(7);
     imageHTML.id = 'NFTImage';
+    console.log(idToImage.get(id).substring(7));
     
     var tokenIdParagraph = document.createElement('p');
+    tokenIdParagraph.id = 'idParagraph';
+    tokenIdParagraph.innerHTML = idToImage;
 
     nft.append(imageHTML);
+    nft.append(tokenIdParagraph);
 
     if(staked){
       var stakedDate = stakingTimestamp.get(id);
