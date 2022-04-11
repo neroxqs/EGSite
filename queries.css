@@ -111,7 +111,7 @@
         background-color: rgba(0, 0, 0, 0.596);
     }
     .hero-section{
-        margin-top: 10%;
+        margin-top: 8%;
         width: 65%;
        font-family: 'Roboto', sans-serif;
     }
@@ -132,7 +132,7 @@
 
 @media only screen and (max-width:392px){
     .hero-section{
-        margin-top: 15%;
+        margin-top: 14%;
         width: 65%;
        font-family: 'Roboto', sans-serif;
     }
