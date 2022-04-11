@@ -158,6 +158,9 @@
     .btn-plus {
         padding: 7px 16px !important; 
     }
+   .hero-text-box{
+      margin: 0;
+   }
     .hero-text-box h1 {
         font-size: 30px;
     }
@@ -166,7 +169,6 @@
     }
    .main-footer {
         font-size: 30px;
-        margin-top: 20px;
     }
     .walletResponsive{
        top: 90%;
