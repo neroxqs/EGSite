@@ -33,6 +33,11 @@ p {
     color: #fff;
 }
 
+.mintDiv{
+    background-color: aqua;
+    display: none;
+}
+
 .navbar{
     background-color: #0000002e;
 }
