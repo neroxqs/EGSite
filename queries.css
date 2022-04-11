@@ -59,15 +59,10 @@
 
 @media only screen and (max-width:700px) {
     .hero-text-box h1 {
-        font-size: 35px;
+        font-size: 25px;
     }
     .btn-plus {
         padding: 10px 40px !important; 
-    }
-   .hero-section{
-        margin-top: 5%;
-        width: 90%;
-       font-family: 'Roboto', sans-serif;
     }
 }
 
