@@ -29,16 +29,19 @@
               <div id="amountMintDiv">
                 <label style="color: aliceblue;">Mint amount</label>
                 <input type="number" id="mintAmount" style="width: 50px; margin-right: 15px;"><br><br>
-              </div>           
-              <a class ="btn btn-full buttonMint" href="javascript:mintWithMana();">Mint</a>
-              <!-- <img src="wand.png" alt="" height="15%" width="15%"> -->
+              </div>
+              <div id="mintDiv">
+                <a class ="btn btn-full" href="javascript:mintWithMana();">Mint</a>
+                <p>182/12200</p>
+              </div>          
+              
             </div>
           </div>  
 
         <div class="col StakedOrcsMainSection" id="bigSection">
           <a href="javascript:selectAllOrcsUnstake();" class="btn btn-full btn-minus">Select all</a>
           <!-- <button class="bigSectionButtons buttonSelect" id="selectStakedOrcs">Select All</button> -->
-          <div class="col stakingcol d-grid flex-wrap StakedOrcsTemporary" id="stakedOrcs">
+          <div class="col stakingcol d-grid flex-wrap justify-content-center StakedOrcsTemporary" id="stakedOrcs">
               <div class="nft">
                 <img src="orc.jpeg" id="NFTImage">
                 <p id="idParagraph">ID Token</p>
@@ -76,7 +79,7 @@
         <div class="col StakedElfsMainSection" id="bigSection">
           <a href="javascript:selectAllElfsUnstake();" class="btn btn-full btn-minus" id="selectStakedElfs">Select all</a>
           <!-- <button class="bigSectionButtons buttonSelect">Select All</button> -->
-          <div class="col stakingcol d-grid flex-wrap StakedElfsTemporary" id="stakedElfs">
+          <div class="col stakingcol d-grid justify-content-center flex-wrap StakedElfsTemporary" id="stakedElfs">
              
               <div class="nft">
                 <img src="elf.jpeg" id="NFTImage">
@@ -94,7 +97,7 @@
         <div class="col UnstakedOrcsMainSection" id="bigSection">
           <a href="javascript:selectAllOrcsStake();" class="btn btn-full btn-minus" id="selectUnstakedOrcs">Select all</a>
           <!-- <button class="bigSectionButtons buttonSelect">Select All</button> -->
-          <div class="col stakingcol d-grid flex-wrap UnstakedOrcsTemporary" id="UnstakedOrcs">
+          <div class="col stakingcol d-grid flex-wrap justify-content-center UnstakedOrcsTemporary" id="UnstakedOrcs">
               <div class="nft">
                 <img src="orc.jpeg" id="NFTImage">
                 <p id="idParagraph">ID token</p>
@@ -108,7 +111,7 @@
         <div class="col UnstakedElfsMainSection" id="bigSection">
           <a href="javascript:selectAllElfsStake();" class="btn btn-full btn-minus" id="selectUnstakedElfs">Select all</a>
           <!-- <button class="bigSectionButtons buttonSelect">Select All</button> -->
-          <div class="col stakingcol d-grid flex-wrap UnstakedElfsTemporary" id="UnstakedElfs">
+          <div class="col stakingcol d-grid flex-wrap justify-content-center UnstakedElfsTemporary" id="UnstakedElfs">
               <div class="nft">
                 <img src="elf.jpeg" id="NFTImage">
                 <p id="idParagraph">ID token</p>
