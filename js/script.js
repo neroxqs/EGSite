@@ -29,7 +29,7 @@ async function mintWithMana(){
 }
 
 async function mintWithEthereum(){
-  var numberBox = document.getElementById("mintAmountEth");
+  var numberBox = document.getElementById("mintAmount");
   var json = await getContractsJSON();
   const accounts = await getAccounts();
 
