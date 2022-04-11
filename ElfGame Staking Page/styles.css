@@ -99,15 +99,9 @@ body{
 
 
 .UnstakedElfsTemporary, .UnstakedOrcsTemporary, .StakedElfsTemporary, .StakedOrcsTemporary{
-     justify-content: center;
-    width: 49%;
-    margin: 5px;
-    margin-top: 15px;
-    background-color: rgba(0, 0, 0, 0);
-    -webkit-box-shadow: 10px 7px 16px 8px rgba(0,0,0,0.95); 
-    box-shadow: 10px 7px 16px 8px rgba(0,0,0,0.95);
+  
     
-/*     justify-content: center;
+    justify-content: center;
     display: grid;
     flex-wrap: nowrap;
     background-color: rgba(0, 0, 0, 0);
@@ -116,7 +110,7 @@ body{
     height: 210px;
     overflow-y: auto !important;
     white-space: nowrap;
-    grid-template-columns: repeat(auto-fit, minmax(130px, max-content)); */
+    grid-template-columns: repeat(auto-fit, minmax(130px, max-content)); 
 }
 
 
