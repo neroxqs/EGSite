@@ -217,6 +217,21 @@ async function rewards() {
   
 }
 
+function displayMintedAmount(){
+  var amount;
+  var paragraph = documents.getElementById('mintedAmount');
+  
+  async function cycle(){
+    amount = await window.mintContract.methods.minted().call();
+   
+    paragraph.innerHTML = amount + '/12200';
+    
+    setTimeout(cycle, 1000);
+  }
+
+  cycle();
+}
+
 // Loading tokens to variables
 
 async function loadStakedElfs(){
@@ -410,6 +425,7 @@ async function load(){
   window.stakeContract = await loadStakingContract();
   window.manaContract = await loadManaContract();
 
+  displayMintedAmount();
   await loadTokens();
   updateMana();
   updateTotalStakedElfs();
