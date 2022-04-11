@@ -29,6 +29,7 @@
 }
 
 @media only screen and (max-width:991px){
+   
     .walletAddress {
         display: none;
     }
@@ -47,7 +48,11 @@
 }
 
 @media only screen and (max-width:740px){
-   
+   .hero-section{
+        margin-top: 5%;
+        width: 90%;
+       font-family: 'Roboto', sans-serif;
+    }
     .hero-text-box h1 {
         font-size: 38px;
     }
@@ -63,6 +68,11 @@
     }
     .btn-plus {
         padding: 10px 40px !important; 
+    }
+   .hero-section{
+        margin-top: 5%;
+        width: 90%;
+       font-family: 'Roboto', sans-serif;
     }
 }
 
