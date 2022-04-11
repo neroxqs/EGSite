@@ -369,11 +369,8 @@ async function drawNFT(typeArray, section, staked){
     imageHTML.id = 'NFTImage';
     
     var tokenIdParagraph = document.createElement('p');
-    tokenIdParagraph.id = 'idParagraph';
-    tokenIdParagraph.innerHTML = id;
 
     nft.append(imageHTML);
-    nft.append(tokenIdParagraph);
 
     if(staked){
       var stakedDate = stakingTimestamp.get(id);
