@@ -35,7 +35,7 @@ p {
 
 .mintDiv{
     visibility: hidden;
- 
+  justify-content: center;
 }
 
 .navbar{
