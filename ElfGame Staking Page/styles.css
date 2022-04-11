@@ -99,6 +99,7 @@ body{
 
 
 .UnstakedElfsTemporary, .UnstakedOrcsTemporary, .StakedElfsTemporary, .StakedOrcsTemporary{
+    justify-content: center;
     display: grid;
     flex-wrap: nowrap;
     background-color: rgba(0, 0, 0, 0);
