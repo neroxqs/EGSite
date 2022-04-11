@@ -124,7 +124,7 @@
     .hero-text-box p{
         font-size: 15px;
     }
-    .walletFooter{
+     .walletResponsive{
         margin-bottom: 10%;
     }
 }
@@ -152,7 +152,7 @@
         font-size: 30px;
         margin-top: 20px;
     }
-    .walletFooter{
+    .walletResponsive{
         margin-bottom: 10%;
     }
     .btn:link,
@@ -181,6 +181,9 @@
     }
     .hero-text-box p{
         font-size: 13px;
+    }
+    .walletResponsive{
+        margin-bottom: 10%;
     }
 }
 
