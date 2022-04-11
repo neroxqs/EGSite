@@ -371,7 +371,7 @@ async function drawNFT(typeArray, section, staked){
     
     var tokenIdParagraph = document.createElement('p');
     tokenIdParagraph.id = 'idParagraph';
-    //tokenIdParagraph.innerHTML = '#' + idToImage.get(id).substring(54).replace(".png","");
+    tokenIdParagraph.innerHTML = '#' + idToImage.get(id).substring(54).replace(".png","");
 
     nft.append(imageHTML);
     nft.append(tokenIdParagraph);
