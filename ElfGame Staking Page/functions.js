@@ -641,7 +641,7 @@ async function selectAllElfsUnstake(){
 }
 
 async function selectAllOrcsUnstake(){
-  var button = document.getElementById("selectStakedElfs");
+  var button = document.getElementById("selectStakedOrcs");
   
   if(button.innerHTML == "Select all"){
     stakedOrcsArray.forEach(function(id){
