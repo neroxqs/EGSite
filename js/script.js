@@ -64,8 +64,13 @@ function isMobileDevice() {
 
 async function connectWalletMobile() {
     if (isMobileDevice()) {
+      if(window.ethereum){
+        displayWallet();
+      }
+      else {
         const metamaskAppDeepLink = "https://metamask.app.link/dapp/elfgame.app/index.html";
         window.location.href = metamaskAppDeepLink;
+      }
     }
 }
 
