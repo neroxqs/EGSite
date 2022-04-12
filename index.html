@@ -54,30 +54,39 @@
                           <a id="connect" class="btn btn-full btn-plus" href="javascript:checkIfWalletIsConnected();">Connect Wallet</a>                        
                           <div class="mintDiv">
                             <div id="amountMintDiv">
-                                <label style="color: aliceblue;">Mint amount</label>
-                                <input type="number" id="mintAmount" style="width: 50px; margin-right: 15px;"><br><br>
+                                <!-- <label style="color: aliceblue;">Mint amount</label> -->
+                                <!-- <input type="number" id="mintAmount" style="width: 50px; margin-right: 15px;"><br><br> -->
+                                <div class="quantity buttons_added">
+                                  <input type="button" value="-" class="minus"><input type="number" step="1" min="1" max="" name="quantity" value="1" title="Qty" class="input-text qty text" size="4" pattern="" inputmode=""><input type="button" value="+" class="plus">
+                                </div>
                             </div>
                             <a id="mint" class="btn btn-full btn-plus" href="javascript:mintWithMana();">Mint</a>
                             <p id="mintedAmount" ></p>
                           </div>
                       </div>
-                    <div class="main-footer">
-                      <div class="container">
-                        <div class="row justify-content-center">
-                            <a href="https://twitter.com/ElfGame2"><ion-icon name="logo-twitter" class="footer-icon " style="color: aliceblue;"></ion-icon></a>
-                            <a href="https://discord.gg/xHyVnCQa"><ion-icon name="logo-discord" class="footer-icon" style="color: aliceblue;"></ion-icon></a>
-                        </div>
-                      </div>
-                    </div>
+                    
                 </div>
             </div>
 
-            <div class="container walletResponsive">
-              <div class="row justify-content-center">
-                <p id="walletFooter"></p>
-              </div>
-            </div>
+            
     </header>
+
+    
+
+    <div class="main-footer">
+      <div class="container">
+        <div class="row justify-content-center">
+            <a href="https://twitter.com/ElfGame2"><ion-icon name="logo-twitter" class="footer-icon " style="color: aliceblue;"></ion-icon></a>
+            <a href="https://discord.gg/xHyVnCQa"><ion-icon name="logo-discord" class="footer-icon" style="color: aliceblue;"></ion-icon></a>
+        </div>
+      </div>
+
+      <div class="container walletResponsive">
+        <div class="row justify-content-center">
+          <p id="walletFooter">fsdfsdfdd</p>
+        </div>
+      </div>
+    </div>
 
 <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
