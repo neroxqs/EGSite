@@ -378,7 +378,11 @@ input[type=submit]:active {
 }
 
 @media only screen and (max-width:991px){
-  
+  .mintAndWand{
+    text-align: center;
+    margin-top: 80px;
+    
+}
 }
 
 @media only screen and (max-width:767px){
@@ -389,11 +393,7 @@ input[type=submit]:active {
 }
 
 @media only screen and (max-width:700px){
-   
-    .mintAndWand{
-        margin-left: 25% ;
-        margin-top: 20%;
-    }
+  
 }
 
 @media only screen and (max-width:575px){
