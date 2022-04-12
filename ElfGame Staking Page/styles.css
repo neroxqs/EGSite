@@ -334,7 +334,7 @@ input[type=submit]:active {
    .quantity.buttons_added .plus {
     padding: 7px 24px 7px;
     /* height: 29px; */
-    background-color: #575757d0;
+    background-color: rgba(0, 0, 0, 0.555);;
     border: 1px solid #efefef;
     cursor:pointer;
     
