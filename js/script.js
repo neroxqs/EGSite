@@ -19,7 +19,7 @@ async function mintWithMana(){
   const accounts = await getAccounts();
 
   //const price = await window.mintContract.methods.manaPrice(numberBox.value);
-  const price = ((100*10**18)*numberBox.value).toString(16);
+  const price = web3.utils.toBN(((100*10**18)*numberBox.value).toString(16));
 
   await window.manaContract.methods.approve(json.mintContractAddress, price).send({ from: accounts[0] });
   await window.mintContract.methods.buyWithMana(numberBox.value).send({ from: accounts[0] });
