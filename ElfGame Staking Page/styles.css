@@ -70,7 +70,7 @@ body{
 }
 
 #mintedAmount{
-    margin-right:5px;
+    margin-right:40px;
 }
 
 
@@ -326,34 +326,30 @@ input[type=submit]:active {
 
 
 @media only screen and (max-width:1200px){
-    .mintAndWand{
-        margin-left: 40% ;
-        margin-top: 25%;
+        .mintAndWand{
+/*         margin-left: 35% ; */
+        margin-top: 10%;
+        justify-content: center;
+    }
+    #mintedAmount{
+        margin-right: 10%;;
     }
     
 }
 
 @media only screen and (max-width:991px){
-    .mintAndWand{
-        margin-left: 40% ;
-        margin-top: 30%;
-    }
+  
 }
 
 @media only screen and (max-width:767px){
     #infoSection{
         width: 100%;
     }
-    .mintAndWand{
-        margin-left: 25% ;
-        margin-top: 20%;
-    }
+   
 }
 
 @media only screen and (max-width:700px){
-    #infoSection{
-        width: 100%;
-    }
+   
     .mintAndWand{
         margin-left: 25% ;
         margin-top: 20%;
@@ -362,18 +358,12 @@ input[type=submit]:active {
 
 @media only screen and (max-width:575px){
  
-    .mintAndWand{
-        margin-left: 38% ;
-        margin-top: 10%;
-    }
+  
 }
 
 @media only screen and (max-width:470px){
   
-    .mintAndWand{
-        margin-left: 35% ;
-        margin-top: 10%;
-    }
+
     .btn-small {
         margin: 10px 0;
         padding: 5px 30px !important; 
