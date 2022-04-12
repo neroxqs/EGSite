@@ -1,5 +1,5 @@
 async function decrease(){
-  var numberBox = document.getElementById("inputMintAmount");
+  var numberBox = document.getElementById("mintAmount");
   var buttonDecrease = document.getElementsByClassName("minus");
   var buttonIncrease = document.getElementsByClassName("plus");
   
@@ -17,7 +17,7 @@ async function decrease(){
 }
 
 async function increase(){
-  var numberBox = document.getElementById("inputMintAmount");
+  var numberBox = document.getElementById("mintAmount");
   var buttonDecrease = document.getElementsByClassName("minus");
   var buttonIncrease = document.getElementsByClassName("plus");
   
