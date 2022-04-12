@@ -18,33 +18,43 @@ REUSABLE COMPONENTS
  }
 
 h1 {
-    text-transform: uppercase;
-    font-weight: 400;
-    letter-spacing: 1px;
-    word-spacing: 3px;
+    /* text-transform: uppercase;
+    font-weight: 400; */
+    /* letter-spacing: 1px; */
+    /* word-spacing: 3px; */
     color: #fff;
+    font-family: 'Roboto', sans-serif;
+    /* 300,400,700 */
+    font-weight: 700;
+    padding-top: 15px;
+
 }
 
 h2 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
     color: #fff;
 }
 
 p {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
     color: #fff;
 }
 
 .mintDiv{
     
     text-align: center;
-    visibility: hidden;
+    visibility: visible;
 }
 
 .navbar{
-    background-color: #0000002e;
+    background-color: #0000006f;
 }
 
 .text{
-    background-color: #0000007e;
+    border-radius: 2%;
+    background-color: #000000b3;
     padding: 5%;
     font-stretch: ultra-expanded;
     -webkit-box-shadow: 10px 7px 16px 8px rgba(0, 0, 0, 0); 
@@ -73,7 +83,7 @@ input[type=submit]{
     background-color: #0000004e;
     border: 1px solid #ffffff;
     color: #fff;
-    margin-right: 15px;
+    /* margin-right: 15px; */
 }
 
 .btn-ghost:link,
@@ -86,7 +96,8 @@ input[type=submit]{
 .btn:active,
 input[type=submit]:hover,
 input[type=submit]:active {
-    background-color: #000000;
+    background-color: #d8d8d8bb;
+    color: #000000;
 
 }
 
@@ -105,6 +116,71 @@ input[type=submit]:active {
   padding: 15px 65px !important; 
 }
 
+
+/* -- quantity box -- */
+
+.quantity {
+    display: inline-block;
+    padding-bottom: 10px; 
+    
+}
+   
+   .quantity .input-text.qty {
+    color: #eeeeee;
+    width: 35px;
+    height:36px;
+    padding: 0 5px;
+    text-align: center;
+    background-color: transparent;
+    border: 1px solid #efefef;
+   }
+   
+   .quantity.buttons_added {
+    text-align: left;
+    position: relative;
+    white-space: nowrap;
+    vertical-align: top; }
+   
+   .quantity.buttons_added input {
+    display: inline-block;
+    margin: 0;
+    vertical-align: top;
+    box-shadow: none;
+   }
+   
+   .quantity.buttons_added .minus,
+   .quantity.buttons_added .plus {
+    padding: 7px 24px 3px;
+    /* height: 29px; */
+    background-color: #bdbdbda8;
+    border: 1px solid #efefef;
+    cursor:pointer;
+    
+}
+   
+   .quantity.buttons_added .minus {
+    border-right: 0;
+    border-radius: 20% 0 0 20% ; }
+   
+   .quantity.buttons_added .plus {
+    border-left: 0; 
+    border-radius: 0 20% 20% 0 ;}
+   
+   .quantity.buttons_added .minus:hover,
+   .quantity.buttons_added .plus:hover {
+    background: #eeeeee; }
+   
+   .quantity input::-webkit-outer-spin-button,
+   .quantity input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    margin: 0; }
+    
+    .quantity.buttons_added .minus:focus,
+   .quantity.buttons_added .plus:focus {
+    outline: none; }
+   
+
 /* --------------------
 SECTIONS
 -------------------------*/
@@ -122,7 +198,7 @@ SECTIONS
  margin-top:1%;
     width:70%;
     position: absolute;
-    top: 50%;
+    top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
    
@@ -158,18 +234,22 @@ nav {
 }
 
 .walletResponsive{
-    bottom: 5px;
     display: none;
 }
 
 .main-footer {
-    font-size: 50px;
-    margin-top: auto;
-    left: 44%;
+    position: fixed;
+    left: 0;
+    bottom: 5%;
+    width: 100%;
+    color: white;
+    text-align: center;
+    height: 70px;
 }
 
 .main-footer .footer-icon {
-    margin-left: 20px;
+    font-size: 40px;
+    margin: 5px;
     color: #fff;
 }
 
