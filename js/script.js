@@ -72,7 +72,7 @@ async function mintWithEthereum(){
   price = price * numberBox.value;
   price = price.toLocaleString('fullwide', {useGrouping:false});
 
-  await window.wethContract.methods.approve(json.stakeContractAddress, price).send({ from: accounts[0] });
+  await window.wethContract.methods.approve(json.mintContractAddress, price).send({ from: accounts[0] });
   await window.mintContract.methods.publicSale(numberBox.value).send({ from: accounts[0] });
 }
 
