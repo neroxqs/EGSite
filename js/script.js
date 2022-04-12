@@ -1,3 +1,39 @@
+async function decrease(){
+  var numberBox = document.getElementById("inputMintAmount");
+  var buttonDecrease = document.getElementsByClassName("minus");
+  var buttonIncrease = document.getElementsByClassName("plus");
+  
+  if(numberBox.value > 1){
+    numberBox.value = parseInt(numberBox.value) - 1;
+    
+    if(numberBox.value == 1){
+      buttonDecrease[0].disabled = true;
+    }
+    
+    if(buttonIncrease[0].disabled){
+      buttonIncrease[0].disabled = false;
+    }
+  }
+}
+
+async function increase(){
+  var numberBox = document.getElementById("inputMintAmount");
+  var buttonDecrease = document.getElementsByClassName("minus");
+  var buttonIncrease = document.getElementsByClassName("plus");
+  
+  if(numberBox.value < 10){
+    numberBox.value = parseInt(numberBox.value) + 1;
+    
+    if(numberBox.value == 10){
+      buttonIncrease[0].disabled = true;
+    }
+    
+    if(buttonDecrease[0].disabled){
+      buttonDecrease[0].disabled = false;
+    }
+  }
+}
+
 function displayMintedAmount(){
   var amount;
   var paragraph = document.getElementById('mintedAmount');
