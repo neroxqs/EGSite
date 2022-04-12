@@ -144,12 +144,12 @@ async function displayWallet() {
         mintDiv[0].style.visibility = "visible";
         
         $( document ).ready(function() {
-            $('input').change(function() {
-              var n = $('input').val();
+            $('mintAmount').change(function() {
+              var n = $('mintAmount').val();
               if (n < 1)
-                $('input').val(1);
+                $('mintAmount').val(1);
               if (n > 10)
-                $('input').val(10);
+                $('mintAmount').val(10);
             });
         });
       
