@@ -1,5 +1,5 @@
 body{
-    background:url('background.jpg');
+    background:url('backgroundnew.jpg');
     min-height:100%;
     background-size: cover;
     background-repeat: no-repeat;
@@ -41,6 +41,7 @@ body{
 #infoSection{
     border: rgba(0, 0, 0, 0.74) 1px solid;
     margin-top: 60px;
+    margin-bottom: 20px;
     height: 100%;
     color: #fff;
     background-color: rgba(34, 34, 34, 0.3);
@@ -71,6 +72,14 @@ body{
 
 
 
+.stakedHeader, .unstakedHeader{
+    width: 100%;
+    color: #ffffff;
+    text-align: center;
+}
+
+
+
 
 
 #bigSection{
@@ -90,10 +99,10 @@ body{
     justify-content: center;
     width: 49%;
     margin: 5px;
-    margin-top: 15px;
     background-color: rgba(0, 0, 0, 0);
     -webkit-box-shadow: 10px 7px 16px 8px rgba(0,0,0,0.95); 
     box-shadow: 10px 7px 16px 8px rgba(0,0,0,0.95);
+    height: 40%;
 }
 
 
@@ -105,12 +114,12 @@ body{
     display: grid;
     flex-wrap: nowrap;
     background-color: rgba(0, 0, 0, 0);
-    margin: 5px;
+    
     width: auto;
-    height: 210px;
+    height: 167px;
     overflow-y: auto !important;
     white-space: nowrap;
-    grid-template-columns: repeat(auto-fit, minmax(130px, max-content)); 
+    grid-template-columns: repeat(auto-fit, minmax(110px, max-content)); 
 }
 
 
@@ -137,9 +146,8 @@ body{
     background-color: rgba(255, 255, 255, 0.158);
     color: white;
     float: left;
-    margin: 4px;
-    height: 200px;
-    width: 130px;
+    height: 160px;
+    width: 110px;
 }
 
 .nft:hover{
@@ -163,7 +171,7 @@ body{
 
 
 #NFTImage{
-    height: 130px;
+    height: 110px;
     width: auto;
     
 }
@@ -200,7 +208,7 @@ input[type=submit]{
     background-color: #0000003e;
     border: 1px solid #ffffff;
     color: #fff;
-    margin-right: 15px;
+    
 }
 
 .btn-ghost:link,
@@ -247,6 +255,71 @@ input[type=submit]:active {
     width: 50px;
     margin: 10px;
 }
+
+.quantity {
+    display: inline-block;
+    padding-bottom: 10px; 
+    justify-content: flex-end;
+    margin-right: 7px;
+    
+}
+.quantity .input-text.qty {
+    color: #eeeeee;
+    width: 35px;
+    height:40px;
+    padding: 0 5px;
+    text-align: center;
+    background-color: transparent;
+    border: 1px solid #efefef;
+   }
+   
+   .quantity.buttons_added {
+    text-align: left;
+    position: relative;
+    white-space: nowrap;
+    vertical-align: top; }
+   
+   .quantity.buttons_added input {
+    display: inline-block;
+    margin: 0;
+    vertical-align: top;
+    box-shadow: none;
+   }
+   
+   .quantity.buttons_added .minus,
+   .quantity.buttons_added .plus {
+    padding: 7px 24px 7px;
+    /* height: 29px; */
+    background-color: #575757d0;
+    border: 1px solid #efefef;
+    cursor:pointer;
+    
+}
+   
+   .quantity.buttons_added .minus {
+    border-right: 0;
+    border-radius: 20% 0 0 20% ; }
+   
+   .quantity.buttons_added .plus {
+    border-left: 0; 
+    border-radius: 0 20% 20% 0 ;}
+   
+   .quantity.buttons_added .minus:hover,
+   .quantity.buttons_added .plus:hover {
+    background: #eeeeee; }
+   
+   .quantity input::-webkit-outer-spin-button,
+   .quantity input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    margin: 0; }
+    
+    .quantity.buttons_added .minus:focus,
+   .quantity.buttons_added .plus:focus {
+    outline: none; }
+   
+
+
 
 @media only screen and (max-width:1200px){
     .mintAndWand{
