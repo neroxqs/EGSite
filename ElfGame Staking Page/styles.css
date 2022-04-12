@@ -145,7 +145,7 @@ body{
     padding: 0;
 }
 
-.nft{
+.nftStaked{
     background-color: rgba(255, 255, 255, 0.158);
     color: white;
     float: left;
@@ -154,7 +154,21 @@ body{
     margin: 5px;
 }
 
-.nft p{
+.nftUnstaked{
+    background-color: rgba(255, 255, 255, 0.158);
+    color: white;
+    float: left;
+    height: 140px;
+    width: 110px;
+    margin: 5px;
+}
+
+.nftStaked p{
+     font-family: 'Roboto', sans-serif;
+    font-size: 11px;
+}
+
+.nftUnstaked p{
      font-family: 'Roboto', sans-serif;
     font-size: 11px;
 }
@@ -165,7 +179,12 @@ body{
     font-weight: bold;
 }
 
-.nft:hover{
+.nftStaked:hover{
+    background-color: rgba(0, 0, 0, 0.555);
+    cursor: pointer;
+}
+
+.nftUnstaked:hover{
     background-color: rgba(0, 0, 0, 0.555);
     cursor: pointer;
 }
