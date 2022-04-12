@@ -130,6 +130,7 @@ async function displayWallet() {
   if(window.ethereum){
     window.web3 = new Web3(window.ethereum);
     var accounts = await getAccounts();
+    var numberBox = document.getElementById("mintAmount");
 
     if(accounts.length>0){
         connectWalletButton.style.visibility = "hidden";
@@ -142,6 +143,16 @@ async function displayWallet() {
         
         mintDiv[0].style.visibility = "visible";
         
+        numberBox.ready(function() {
+            $('input').change(function() {
+              var n = $('input').val();
+              if (n < 1)
+                $('input').val(1);
+              if (n > 10)
+                $('input').val(10);
+            });
+        });
+      
         displayMintedAmount();
     }
     else{
