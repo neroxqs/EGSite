@@ -443,7 +443,7 @@ async function load(){
 // Onclick functions
 
 async function mintWithEthereum(){
-  var numberBox = document.getElementById("mintAmountEth");
+  var numberBox = document.getElementById("inputMintAmount");
   var json = await getContractsJSON();
   const accounts = await getAccounts();
 
@@ -456,7 +456,7 @@ async function mintWithEthereum(){
 }
 
 async function mintWithMana(){
-  var numberBox = document.getElementById("mintAmount");
+  var numberBox = document.getElementById("inputMintAmount");
   var json = await getContractsJSON();
   const accounts = await getAccounts();
 
