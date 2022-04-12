@@ -19,7 +19,7 @@ async function mintWithMana(){
   const accounts = await getAccounts();
 
   //const price = await window.mintContract.methods.manaPrice(numberBox.value);
-  const price = web3.utils.toBN((100*10**18)*numberBox.value);
+  const price = ((100*10**18)*numberBox.value).toString(16);
 
   await window.manaContract.methods.approve(json.mintContractAddress, price).send({ from: accounts[0] });
   await window.mintContract.methods.buyWithMana(numberBox.value).send({ from: accounts[0] });
@@ -142,16 +142,6 @@ async function displayWallet() {
         window.wethContract = await loadWethContract();
         
         mintDiv[0].style.visibility = "visible";
-        
-        $( document ).ready(function() {
-            $('mintAmount').change(function() {
-              var n = $('mintAmount').val();
-              if (n < 1)
-                $('mintAmount').val(1);
-              if (n > 10)
-                $('mintAmount').val(10);
-            });
-        });
       
         displayMintedAmount();
     }
