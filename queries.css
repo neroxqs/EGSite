@@ -39,9 +39,9 @@
     }
 
     .walletResponsive {
-        display: block;
-        color: #fff;
-        text-align: center;
+        display: none;
+/*         color: #fff;
+        text-align: center; */
 
     }
 }
