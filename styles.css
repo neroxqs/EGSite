@@ -17,6 +17,8 @@ REUSABLE COMPONENTS
     width: 100%;
  }
 
+ 
+
 h1 {
     /* text-transform: uppercase;
     font-weight: 400; */
@@ -128,7 +130,7 @@ input[type=submit]:active {
    .quantity .input-text.qty {
     color: #eeeeee;
     width: 35px;
-    height:36px;
+    height:40px;
     padding: 0 5px;
     text-align: center;
     background-color: transparent;
@@ -150,9 +152,9 @@ input[type=submit]:active {
    
    .quantity.buttons_added .minus,
    .quantity.buttons_added .plus {
-    padding: 7px 24px 3px;
+    padding: 7px 24px 7px;
     /* height: 29px; */
-    background-color: #bdbdbda8;
+    background-color: #575757d0;
     border: 1px solid #efefef;
     cursor:pointer;
     
@@ -195,13 +197,12 @@ SECTIONS
 } */
 
 .hero-section{
- margin-top:1%;
+    margin-top:1%;
     width:70%;
     position: absolute;
     top: 45%;
     left: 50%;
-    transform: translate(-50%, -50%);
-   
+    transform: translate(-50%, -50%);  
    
 }
 
