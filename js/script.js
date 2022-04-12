@@ -143,14 +143,8 @@ async function displayWallet() {
         
         mintDiv[0].style.visibility = "visible";
         
-        numberBox.ready(function() {
-            $('input').change(function() {
-              var n = $('input').val();
-              if (n < 1)
-                $('input').val(1);
-              if (n > 10)
-                $('input').val(10);
-            });
+        $( document ).ready(function() {
+            console.log( "ready!" );
         });
       
         displayMintedAmount();
