@@ -182,7 +182,8 @@
         font-size: 10px;
     }
    .main-footer {
-        font-size: 15px;
+      height: 15px;
+/*         font-size: 15px; */
     }
     
     
