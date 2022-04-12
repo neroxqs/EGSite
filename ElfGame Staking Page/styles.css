@@ -313,7 +313,7 @@ input[type=submit]:active {
     height:40px;
     padding: 0 5px;
     text-align: center;
-    background-color: rgba(255, 255, 255, 0.322);
+    background-color: rgba(255, 255, 255, 0.150);
     border: 1px solid #efefef;
    }
    
@@ -350,7 +350,8 @@ input[type=submit]:active {
    
    .quantity.buttons_added .minus:hover,
    .quantity.buttons_added .plus:hover {
-    background: rgba(0, 0, 0, 0.493); }
+    background: rgba(0, 0, 0, 0.657);
+    color: rgb(255, 255, 255); }
    
    .quantity input::-webkit-outer-spin-button,
    .quantity input::-webkit-inner-spin-button {
