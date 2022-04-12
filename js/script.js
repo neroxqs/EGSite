@@ -145,9 +145,7 @@ async function getAccounts(){
 
 async function updateAccounts(newText) {
     const walletHeader = document.getElementById('walletHeader');
-    const walletFooter = document.getElementById('walletFooter');
     walletHeader.innerHTML = newText;
-    walletFooter.innerHTML = newText;
 }
 
 async function checkNetwork() {
