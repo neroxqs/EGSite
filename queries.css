@@ -38,12 +38,12 @@
         font-size: 40px;
     }
 
-    .walletResponsive {
+/*     .walletResponsive {
         display: none;
-/*         color: #fff;
-        text-align: center; */
+        color: #fff;
+        text-align: center;
 
-    }
+    } */
 }
 
 @media only screen and (max-width:740px){
