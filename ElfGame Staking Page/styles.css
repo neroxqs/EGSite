@@ -117,7 +117,7 @@ body{
     flex-wrap: nowrap;
     background-color: rgba(0, 0, 0, 0);  
     width: auto;
-    height: 145px;
+    height: 148px;
     overflow-y: auto !important;
     white-space: nowrap;
     grid-template-columns: repeat(auto-fit, minmax(110px, max-content)); 
@@ -168,7 +168,7 @@ body{
     background-color: rgba(255, 255, 255, 0.158);
     color: white;
     float: left;
-    height: 144px;
+    height: 146px;
     width: 110px;
     margin: 5px;
 }
