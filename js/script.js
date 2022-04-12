@@ -119,9 +119,11 @@ async function checkNetwork() {
 }
 
 async function displayWallet() {
+  const connectWalletButton = document.getElementById('connect');
+  
+  if(window.ethereum){
     window.web3 = new Web3(window.ethereum);
     const mintDiv = document.getElementsByClassName('mintDiv');
-    const connectWalletButton = document.getElementById('connect');
     var accounts = await getAccounts();
 
     if(accounts.length>0){
@@ -142,6 +144,10 @@ async function displayWallet() {
         mintDiv[0].style.visibility = "hidden";
         connectWalletButton.style.visibility = "visible";
     }
+  }
+  else{
+      connectWalletButton.style.visibility = "visible";
+  }
 }
 
 async function checkIfWalletIsConnected() {
