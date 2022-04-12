@@ -116,7 +116,7 @@ body{
     background-color: rgba(0, 0, 0, 0);
     
     width: auto;
-    height: 167px;
+    height: 169px;
     overflow-y: auto !important;
     white-space: nowrap;
     grid-template-columns: repeat(auto-fit, minmax(110px, max-content)); 
