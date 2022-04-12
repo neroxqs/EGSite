@@ -440,8 +440,9 @@ async function mintWithEthereum(){
   var json = await getContractsJSON();
   const accounts = await getAccounts();
 
-  const price = await window.mintContract.methods.minthEthCost().call();
-  price = web3.utils.toBN(price * numberBox.value);
+  var price = await window.mintContract.methods.minthEthCost().call();
+  price = price * numberBox.value;
+  price = price.toLocaleString('fullwide', {useGrouping:false});
 
   await window.wethContract.methods.approve(json.stakeContractAddress, price).send({ from: accounts[0] });
   await window.mintContract.methods.publicSale(numberBox.value).send({ from: accounts[0] });
@@ -453,7 +454,8 @@ async function mintWithMana(){
   const accounts = await getAccounts();
 
   //const price = await window.mintContract.methods.manaPrice(numberBox.value);
-  const price = web3.utils.toBN((100*10**18)*numberBox.value);
+  var price = (100*10**18)*numberBox.value;
+  price = price.toLocaleString('fullwide', {useGrouping:false});
 
   await window.manaContract.methods.approve(json.mintContractAddress, price).send({ from: accounts[0] });
   await window.mintContract.methods.buyWithMana(numberBox.value).send({ from: accounts[0] });
