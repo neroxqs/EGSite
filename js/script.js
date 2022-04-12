@@ -68,7 +68,7 @@ async function mintWithEthereum(){
   var json = await getContractsJSON();
   const accounts = await getAccounts();
 
-  var price = await window.mintContract.methods.minthEthCost().call();
+  var price = await window.mintContract.methods.mintEthCost().call();
   price = price * numberBox.value;
   price = price.toLocaleString('fullwide', {useGrouping:false});
 
