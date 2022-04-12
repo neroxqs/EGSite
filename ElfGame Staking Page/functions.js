@@ -352,7 +352,14 @@ async function displayUnstakedNFTS(type){
 async function drawNFT(typeArray, section, staked){
   typeArray.forEach(function(id) {
     var nft = document.createElement('section');
-    nft.className = 'nft';
+    
+    if(staked){
+      nft.className = 'nftStaked';
+    }
+    else{
+      nft.className = 'nftUnstaked';
+    }
+    
     nft.id = 'nft' + id;
 
     nft.onclick = function () {
