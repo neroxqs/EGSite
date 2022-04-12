@@ -159,6 +159,12 @@ body{
     font-size: 10px;
 }
 
+#idParagraph{
+    font-family: 'Roboto', sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+}
+
 .nft:hover{
     background-color: rgba(0, 0, 0, 0.555);
     cursor: pointer;
