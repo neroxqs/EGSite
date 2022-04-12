@@ -97,7 +97,7 @@ body{
     
 }
 
-.UnstakedElfsMainSection, .UnstakedOrcsMainSection, .StakedElfsMainSection, .StakedOrcsMainSection{
+.UnstakedElfsMainSection, .UnstakedOrcsMainSection{
     
     justify-content: center;
     width: 49%;
@@ -110,16 +110,26 @@ body{
 
 
 
-.UnstakedElfsTemporary, .UnstakedOrcsTemporary, .StakedElfsTemporary, .StakedOrcsTemporary{
-  
-    
+
+.UnstakedElfsTemporary, .UnstakedOrcsTemporary{
     justify-content: center;
     display: grid;
     flex-wrap: nowrap;
-    background-color: rgba(0, 0, 0, 0);
-    
+    background-color: rgba(0, 0, 0, 0);  
     width: auto;
     height: 171px;
+    overflow-y: auto !important;
+    white-space: nowrap;
+    grid-template-columns: repeat(auto-fit, minmax(110px, max-content)); 
+}
+
+.StakedElfsTemporary, .StakedOrcsTemporary{
+    justify-content: center;
+    display: grid;
+    flex-wrap: nowrap;
+    background-color: rgba(0, 0, 0, 0);  
+    width: auto;
+    height: 151px;
     overflow-y: auto !important;
     white-space: nowrap;
     grid-template-columns: repeat(auto-fit, minmax(110px, max-content)); 
