@@ -39,21 +39,31 @@
     }
 
     .walletResponsive {
-        position: absolute;
         display: block;
         color: #fff;
-        top: 95%;
+        text-align: center;
 
     }
 }
 
 @media only screen and (max-width:740px){
+    .quantity.buttons_added .minus,
+   .quantity.buttons_added .plus {
+    padding: 0 10px 0 10px;
+    }
+
+    
+   .quantity .input-text.qty { 
+    height:26px;
+   }
+
     .hero-text-box h1 {
         font-size: 20px;
     }
     .btn-plus {
         padding: 8px 55px !important; 
     }
+  
    
 }
 
@@ -64,6 +74,7 @@
     .btn-plus {
         padding: 10px 40px !important; 
     }
+  
 }
 
 @media only screen and (max-width:580px){
@@ -84,6 +95,7 @@
     .btn-plus {
         padding: 10px 35px !important; 
     }
+  
 }
 
 @media only screen and (max-width:530px){
@@ -98,6 +110,7 @@
     .hero-text-box p{
         font-size: 18px;
     }
+ 
 }
 
 @media only screen and (max-width:480px) {
@@ -120,6 +133,7 @@
     .hero-text-box p{
         font-size: 15px;
     }
+ 
 }
 
 @media only screen and (max-width:432px){
@@ -140,9 +154,7 @@
     .hero-text-box p{
         font-size: 15px;
     }
-     .walletResponsive{
-        top: 90%;
-    }
+ 
 }
 
 
@@ -172,9 +184,8 @@
    .main-footer {
         font-size: 30px;
     }
-    .walletResponsive{
-       top: 90%;
-    }
+    
+    
     .btn:link,
     .btn:visited,
     input[type=submit]{
@@ -202,9 +213,7 @@
     .hero-text-box p{
         font-size: 13px;
     }
-    .walletResponsive{
-       top: 90%;
-    }
+    
 }
 
 @media only screen and (max-width:329px){
