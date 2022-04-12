@@ -448,7 +448,7 @@ async function decrease(){
   var buttonIncrease = document.getElementsByClassName("plus");
   
   if(numberBox.value > 1){
-    numberBox.value = numberBox.value - 1;
+    numberBox.value = parseInt(numberBox.value) - 1;
     
     if(numberBox.value == 1){
       buttonDecrease[0].disabled = true;
@@ -466,7 +466,7 @@ async function increase(){
   var buttonIncrease = document.getElementsByClassName("plus");
   
   if(numberBox.value < 10){
-    numberBox.value = numberBox.value + 1;
+    numberBox.value = parseInt(numberBox.value) + 1;
     
     if(numberBox.value == 10){
       buttonIncrease[0].disabled = true;
