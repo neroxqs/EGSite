@@ -124,12 +124,9 @@
         margin: 5px;
         color: #fff;
     }
-   .hero-section{
-        
-        width: 65%;
-       font-family: 'Roboto', sans-serif;
-      height: 20%;
-    }
+   .hero-text-box{
+   height: 40%;
+   }
    
    
  
