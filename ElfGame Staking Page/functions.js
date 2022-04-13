@@ -81,10 +81,7 @@ async function checkNetwork() {
       window.location.href = "../index.html";
     }
   })
-  .catch((err) => {
-    alert("Unable to retrieve netwok information.");
-    window.location.href = "../index.html";
-  });
+  
 }
 
 async function connect() {
@@ -448,7 +445,7 @@ async function loadTokens(){
 // Loading contracts
 
 async function load(){
-  await loadWeb3();
+  loadWeb3();
   checkNetwork();
   
   window.mintContract = await loadMintingContract();
