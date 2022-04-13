@@ -78,21 +78,23 @@ async function checkNetwork() {
   web3.eth.net.getId().then((networkId) => {
     if (networkId != 80001) {
       alert("Connect to Mumbai Testnet first.");
+      window.location.href = "../index.html";
     }
   })
   .catch((err) => {
     alert("Unable to retrieve netwok information.");
+    window.location.href = "../index.html";
   });
 }
 
 async function connect() {
-  //checkNetwork();
   const accounts = await getAccounts();
 
   if(accounts.length>0){
     updateAccounts(accounts[0]);
   }
   else{
+    window.location.href = "../index.html";
   }
 }
 
