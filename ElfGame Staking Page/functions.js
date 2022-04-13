@@ -1,5 +1,5 @@
 // Global variables
-
+var maticMainnetID = 137;
 var stakingTimestamp = new Map();
 
 var stakedElfsInfo = new Map();
@@ -76,8 +76,8 @@ function toFormatString(tStruct){
 
 async function checkNetwork() {
   web3.eth.net.getId().then((networkId) => {
-    if (networkId != 80001) {
-      alert("Connect to Mumbai Testnet first.");
+    if (networkId != maticMainnetId) {
+      alert("Connect to Matic Mainnet first.");
       window.location.href = "../index.html";
     }
   })
