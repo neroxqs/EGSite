@@ -224,15 +224,10 @@
     .btn:link,
     .btn:visited,
     input[type=submit]{
-        font-weight: 300;
+        font-weight: 100;
     }
 
-    .hero-text-box h1 {
-        font-size: 25px;
-    }
-    .hero-text-box p{
-        font-size: 13px;
-    }
+   
     
 }
 
