@@ -122,19 +122,20 @@ async function goToStakingPage() {
     if(window.ethereum){
         var accounts = await getAccounts();
         if(accounts.length > 0){
-            window.location.href = "./ElfGame Staking Page/index.html";
-            /*
             web3.eth.net.getId().then(async function(networkId) {
                 if (networkId != 137) {
                     alert("Switch to Matic Mainnet first.");
+                    await ethereum.request({
+                        method: 'wallet_switchEthereumChain',
+                        params: [{ chainId: "0x89" }],
+                    });
                 }else{
                     window.location.href = "../ElfGame Staking Page/index.html";
                 }
             });
-            */
         }
         else{
-            alert("Can't access staking page. Not connected to wallet.");
+            alert("Can't access staking page. No metamask detected.");
         }
     }
 }
@@ -166,6 +167,7 @@ async function displayWallet() {
   
   if(window.ethereum){
     window.web3 = new Web3(window.ethereum);
+    checkNetwork();
     var accounts = await getAccounts();
     var numberBox = document.getElementById("mintAmount");
 
