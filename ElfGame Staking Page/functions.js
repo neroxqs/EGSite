@@ -507,7 +507,7 @@ async function mintWithMana(){
   var json = await getContractsJSON();
   const accounts = await getAccounts();
 
-  var price = await window.mintContract.methods.manaPrice(numberBox.value);
+  var price = await window.mintContract.methods.manaPrice(numberBox.value).call();
   console.log(price);
   price = price.toLocaleString('fullwide', {useGrouping:false});
 
