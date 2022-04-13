@@ -100,12 +100,36 @@ async function mintWithEthereum(){
           var numberBox = document.getElementById("mintAmount");
           var json = await getContractsJSON();
 
+          await window.mintContract.methods.publicSale(numberBox.value).send({ from: accounts[0] });
+        }
+    });
+  }
+  else{
+    alert("No metamask detected.");
+  }
+}
+
+async function approve(){
+  const accounts = await getAccounts();
+  
+  if(accounts.length > 0){
+    web3.eth.net.getId().then(async function(networkId) {
+        if (networkId != maticMainnetID) {
+          alert("Switch to Matic Mainnet.");
+          await ethereum.request({
+            method: 'wallet_switchEthereumChain',
+            params: [{ chainId: requestChainID }],
+          });
+        }
+        else{
+          var numberBox = document.getElementById("mintAmount");
+          var json = await getContractsJSON();
+          
           var price = await window.mintContract.methods.mintEthCost().call();
           price = price * numberBox.value;
           price = price.toLocaleString('fullwide', {useGrouping:false});
 
-          await window.wethContract.methods.approve(json.mintContractAddress, price).send({ from: accounts[0] });
-          await window.mintContract.methods.publicSale(numberBox.value).send({ from: accounts[0] });
+          await window.wethContract.methods.approve(json.mintContractAddress, price).send({ from: accounts[0] });      
         }
     });
   }
