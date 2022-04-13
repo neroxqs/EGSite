@@ -362,12 +362,24 @@ async function drawNFT(typeArray, section, staked){
     
     nft.id = 'nft' + id;
 
-    nft.onclick = function () {
-      if(document.getElementById('nft' + id).className == 'selected'){
-        document.getElementById('nft' + id).className = 'nft';
+    if(staked){
+      nft.onclick = function () {
+        if(document.getElementById('nft' + id).className == 'selected'){
+          document.getElementById('nft' + id).className = 'nftStaked';
+        }
+        else{
+          document.getElementById('nft' + id).className = 'selected';
+        }
       }
-      else{
-        document.getElementById('nft' + id).className = 'selected';
+    }
+    else{
+      nft.onclick = function () {
+        if(document.getElementById('nft' + id).className == 'selected'){
+          document.getElementById('nft' + id).className = 'nftUnstaked';
+        }
+        else{
+          document.getElementById('nft' + id).className = 'selected';
+        }
       }
     }
 
