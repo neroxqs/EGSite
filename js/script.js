@@ -1,3 +1,7 @@
+var ethMainnetID = 80001;
+var requestChainID = "0x13881";
+//0x89 eth Mainnet -> 137
+
 async function decrease(){
   var numberBox = document.getElementById("mintAmount");
   var buttonDecrease = document.getElementsByClassName("minus");
@@ -54,11 +58,11 @@ async function mintWithMana(){
   
   if(accounts.length > 0){
     web3.eth.net.getId().then(async function(networkId) {
-      if (networkId != 137) {
+      if (networkId != ethMainnetID) {
         alert("Switch to Matic Mainnet.");
         await ethereum.request({
           method: 'wallet_switchEthereumChain',
-          params: [{ chainId: "0x89" }],
+          params: [{ chainId: requestChainID }],
         });
       }
       else{
@@ -83,11 +87,11 @@ async function mintWithEthereum(){
   
   if(accounts.length > 0){
     web3.eth.net.getId().then(async function(networkId) {
-        if (networkId != 137) {
+        if (networkId != ethMainnetIDv) {
           alert("Switch to Matic Mainnet.");
           await ethereum.request({
             method: 'wallet_switchEthereumChain',
-            params: [{ chainId: "0x89" }],
+            params: [{ chainId: requestChainID }],
           });
         }
         else{
@@ -155,11 +159,11 @@ async function goToStakingPage() {
         var accounts = await getAccounts();
         if(accounts.length > 0){
             web3.eth.net.getId().then(async function(networkId) {
-                if (networkId != 137) {
+                if (networkId != ethMainnetID) {
                     alert("Switch to Matic Mainnet first.");
                     await ethereum.request({
                         method: 'wallet_switchEthereumChain',
-                        params: [{ chainId: "0x89" }],
+                        params: [{ chainId: requestChainID }],
                     });
                 }else{
                     window.location.href = "../ElfGame Staking Page/index.html";
@@ -186,11 +190,11 @@ async function checkNetwork() {
   
   if(accounts.length > 0){
     web3.eth.net.getId().then(async function(networkId) {
-      if (networkId != 137) {
+      if (networkId != ethMainnetID7) {
         alert("Switch to Matic Mainnet.");
         await ethereum.request({
           method: 'wallet_switchEthereumChain',
-          params: [{ chainId: "0x89" }],
+          params: [{ chainId: requestChainID }],
         });
       }
     });
