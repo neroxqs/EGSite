@@ -50,30 +50,62 @@ function displayMintedAmount(){
 }
 
 async function mintWithMana(){
-  var numberBox = document.getElementById("mintAmount");
-  var json = await getContractsJSON();
   const accounts = await getAccounts();
-
-  //var price = await window.mintContract.methods.manaPrice(numberBox.value).call();
   
-  var price = (100*10**18)*numberBox.value;
-  price = price.toLocaleString('fullwide', {useGrouping:false});
+  if(accounts.length > 0){
+    web3.eth.net.getId().then(async function(networkId) {
+      if (networkId != 137) {
+        alert("Switch to Matic Mainnet.");
+        await ethereum.request({
+          method: 'wallet_switchEthereumChain',
+          params: [{ chainId: "0x89" }],
+        });
+      }
+      else{
+        var numberBox = document.getElementById("mintAmount");
+        var json = await getContractsJSON();
 
-  await window.manaContract.methods.approve(json.mintContractAddress, price).send({ from: accounts[0] });
-  await window.mintContract.methods.buyWithMana(numberBox.value).send({ from: accounts[0] });
+        var price = await window.mintContract.methods.manaPrice(numberBox.value).call();
+        price = price.toLocaleString('fullwide', {useGrouping:false});
+
+        await window.manaContract.methods.approve(json.mintContractAddress, price).send({ from: accounts[0] });
+        await window.mintContract.methods.buyWithMana(numberBox.value).send({ from: accounts[0] });
+      }
+    });
+  }
+  else{
+    alert("No metamask detected.");
+  }
 }
 
 async function mintWithEthereum(){
-  var numberBox = document.getElementById("mintAmount");
-  var json = await getContractsJSON();
   const accounts = await getAccounts();
+  
+  if(accounts.length > 0){
+    web3.eth.net.getId().then(async function(networkId) {
+        if (networkId != 137) {
+          alert("Switch to Matic Mainnet.");
+          await ethereum.request({
+            method: 'wallet_switchEthereumChain',
+            params: [{ chainId: "0x89" }],
+          });
+        }
+        else{
+          var numberBox = document.getElementById("mintAmount");
+          var json = await getContractsJSON();
 
-  var price = await window.mintContract.methods.mintEthCost().call();
-  price = price * numberBox.value;
-  price = price.toLocaleString('fullwide', {useGrouping:false});
+          var price = await window.mintContract.methods.mintEthCost().call();
+          price = price * numberBox.value;
+          price = price.toLocaleString('fullwide', {useGrouping:false});
 
-  await window.wethContract.methods.approve(json.mintContractAddress, price).send({ from: accounts[0] });
-  await window.mintContract.methods.publicSale(numberBox.value).send({ from: accounts[0] });
+          await window.wethContract.methods.approve(json.mintContractAddress, price).send({ from: accounts[0] });
+          await window.mintContract.methods.publicSale(numberBox.value).send({ from: accounts[0] });
+        }
+    });
+  }
+  else{
+    alert("No metamask detected.");
+  }
 }
 
 async function getContractsJSON() {
@@ -150,15 +182,22 @@ async function updateAccounts(newText) {
 }
 
 async function checkNetwork() {
+  var accounts = await getAccounts();
+  
+  if(accounts.length > 0){
     web3.eth.net.getId().then(async function(networkId) {
-        if (networkId != 137) {
-            alert("Not on Matic Mainnet.");
-            await ethereum.request({
-                method: 'wallet_switchEthereumChain',
-                params: [{ chainId: "0x89" }],
-            });
-        }
+      if (networkId != 137) {
+        alert("Switch to Matic Mainnet.");
+        await ethereum.request({
+          method: 'wallet_switchEthereumChain',
+          params: [{ chainId: "0x89" }],
+        });
+      }
     });
+  }
+  else{
+    alert("No metamask detected.");
+  }
 }
 
 async function displayWallet() {
