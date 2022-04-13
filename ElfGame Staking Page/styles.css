@@ -183,6 +183,8 @@ body{
     font-size: 11px;
 }
 
+
+
 #idParagraph{
     font-family: 'Roboto', sans-serif;
     font-size: 13px;
@@ -212,6 +214,11 @@ body{
     cursor: pointer;
 }
 
+.selectedStaked p{
+     font-family: 'Roboto', sans-serif;
+    font-size: 11px;
+}
+
 .selectedUnstaked{
     background-color: rgba(0, 0, 0, 0.453);
     color: white;
@@ -223,6 +230,13 @@ body{
 
 .selectedUnstaked:hover{
     cursor: pointer;
+}
+
+
+
+.selectedUnstaked p{
+     font-family: 'Roboto', sans-serif;
+    font-size: 11px;
 }
 
 
