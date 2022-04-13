@@ -87,7 +87,7 @@ async function mintWithEthereum(){
   
   if(accounts.length > 0){
     web3.eth.net.getId().then(async function(networkId) {
-        if (networkId != ethMainnetIDv) {
+        if (networkId != ethMainnetID) {
           alert("Switch to Matic Mainnet.");
           await ethereum.request({
             method: 'wallet_switchEthereumChain',
