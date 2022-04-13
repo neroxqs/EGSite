@@ -21,7 +21,7 @@
 
 @media only screen and (max-width:1002px){
     .hero-text-box h1 {
-        font-size: 44px;
+        font-size: 40px;
     }
     .btn-plus {
         padding: 10px 60px !important; 
@@ -35,7 +35,7 @@
     }
   
     .hero-text-box h1 {
-        font-size: 25px;
+        font-size: 20px;
     }
      .main-footer .footer-icon {
         font-size: 30px;
