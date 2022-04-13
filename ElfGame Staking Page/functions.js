@@ -1,5 +1,5 @@
 // Global variables
-var maticMainnetID = 80001;
+var maticMainnetId = 80001;
 var stakingTimestamp = new Map();
 
 var stakedElfsInfo = new Map();
@@ -81,7 +81,10 @@ async function checkNetwork() {
       window.location.href = "../index.html";
     }
   })
-  
+  .catch((err) => {
+    alert("Unable to retrieve netwok information.");
+    window.location.href = "../index.html";
+  });
 }
 
 async function connect() {
