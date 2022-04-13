@@ -110,8 +110,13 @@
     .hero-text-box p{
         font-size: 18px;
     }
-     .footer-icon{
-   font-size: 10px;
+    .footer-icon{
+   font-size: 8px;
+   }
+   
+   .main-footer{
+/*       position: relative; */
+      bottom: 8px;
    }
    
    
@@ -138,6 +143,14 @@
     .hero-text-box p{
         font-size: 15px;
     }
+    .footer-icon{
+   font-size: 8px;
+   }
+   
+   .main-footer{
+/*       position: relative; */
+      bottom: 8px;
+   }
  
 }
 
@@ -161,6 +174,11 @@
     }
    .footer-icon{
    font-size: 8px;
+   }
+   
+   .main-footer{
+/*       position: relative; */
+      bottom: 8px;
    }
  
 }
