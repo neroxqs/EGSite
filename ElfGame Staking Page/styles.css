@@ -208,6 +208,10 @@ body{
     margin: 5px;
 }
 
+.selectedStaked:hover{
+    cursor: pointer;
+}
+
 .selectedUnstaked{
     background-color: rgba(0, 0, 0, 0.453);
     color: white;
@@ -217,7 +221,7 @@ body{
     margin: 5px;
 }
 
-.selected:hover{
+.selectedUnstaked:hover{
     cursor: pointer;
 }
 
