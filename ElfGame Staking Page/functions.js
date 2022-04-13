@@ -105,9 +105,7 @@ async function loadWeb3() {
       connect()
   }
   else{
-    web3.eth.net.getId().then(console.log);
-    web3.eth.net.getNetworkType().then(console.log);
-    alert("You don't have metamask.");
+    window.location.href = "../index.html";
   }
 }
 
