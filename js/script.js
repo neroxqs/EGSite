@@ -1,6 +1,7 @@
-var ethMainnetID = 80001;
-var requestChainID = "0x13881";
-//0x89 eth Mainnet -> 137
+var maticMainnetID = 137;
+var requestChainID = "0x89";
+//0x89 matic Mainnet -> 137
+//0x13881 matic Testnet -> 80001
 
 async function decrease(){
   var numberBox = document.getElementById("mintAmount");
@@ -58,7 +59,7 @@ async function mintWithMana(){
   
   if(accounts.length > 0){
     web3.eth.net.getId().then(async function(networkId) {
-      if (networkId != ethMainnetID) {
+      if (networkId != maticMainnetID) {
         alert("Switch to Matic Mainnet.");
         await ethereum.request({
           method: 'wallet_switchEthereumChain',
@@ -87,7 +88,7 @@ async function mintWithEthereum(){
   
   if(accounts.length > 0){
     web3.eth.net.getId().then(async function(networkId) {
-        if (networkId != ethMainnetID) {
+        if (networkId != maticMainnetID) {
           alert("Switch to Matic Mainnet.");
           await ethereum.request({
             method: 'wallet_switchEthereumChain',
@@ -159,7 +160,7 @@ async function goToStakingPage() {
         var accounts = await getAccounts();
         if(accounts.length > 0){
             web3.eth.net.getId().then(async function(networkId) {
-                if (networkId != ethMainnetID) {
+                if (networkId != maticMainnetID) {
                     alert("Switch to Matic Mainnet first.");
                     await ethereum.request({
                         method: 'wallet_switchEthereumChain',
@@ -190,7 +191,7 @@ async function checkNetwork() {
   
   if(accounts.length > 0){
     web3.eth.net.getId().then(async function(networkId) {
-      if (networkId != ethMainnetID) {
+      if (networkId != maticMainnetID) {
         alert("Switch to Matic Mainnet.");
         await ethereum.request({
           method: 'wallet_switchEthereumChain',
