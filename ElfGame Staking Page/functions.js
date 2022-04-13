@@ -667,7 +667,7 @@ async function selectAllElfsStake(){
   else if(button.innerHTML == "Deselect all"){
     unstakedElfsArray.forEach(function(id){
       var nft = document.getElementById("nft" + id);
-      nft.className = 'nft';
+      nft.className = 'nftUnstaked';
     });
     button.innerHTML = "Select all";
   }
@@ -686,7 +686,7 @@ async function selectAllOrcsStake(){
   else if(button.innerHTML == "Deselect all"){
     unstakedOrcsArray.forEach(function(id){
       var nft = document.getElementById("nft" + id);
-      nft.className = 'nft';
+      nft.className = 'nftUnstaked';
     });
     button.innerHTML = "Select all";
   }
@@ -705,7 +705,7 @@ async function selectAllElfsUnstake(){
   else if(button.innerHTML == "Deselect all"){
     stakedElfsArray.forEach(function(id){
       var nft = document.getElementById("nft" + id);
-      nft.className = 'nft';
+      nft.className = 'nftStaked';
     });
     button.innerHTML = "Select all";
   }
@@ -724,7 +724,7 @@ async function selectAllOrcsUnstake(){
   else if(button.innerHTML == "Deselect all"){
     stakedOrcsArray.forEach(function(id){
       var nft = document.getElementById("nft" + id);
-      nft.className = 'nft';
+      nft.className = 'nftStaked';
     });
     button.innerHTML = "Select all";
   }
