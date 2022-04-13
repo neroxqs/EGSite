@@ -110,6 +110,13 @@
     .hero-text-box p{
         font-size: 18px;
     }
+   .main-footer {
+      height: 15px;
+           bottom: 2px;
+/*         font-size: 15px; */
+    }
+   
+   
  
 }
 
@@ -153,6 +160,10 @@
     }
     .hero-text-box p{
         font-size: 15px;
+    }
+   .main-footer {
+      height: 15px;
+/*         font-size: 15px; */
     }
  
 }
