@@ -34,7 +34,18 @@ async function getImageNFT(){
       idToImage.set(allIds[i],json.image);
     }
     catch(error) {
-      console.error(error);
+      if(stakedElfsArray.includes(id)){
+        stakedElfsArray.remove(id);
+      }
+      else if(stakedOrcsArray.includes(id)){
+        stakedOrcsArray.remove(id);
+      }
+      else if(unstakedElfsArray.includes(id)){
+        unstakedElfsArray.remove(id);
+      }
+      else if(unstakedOrcsArray.includes(id)){
+        unstakedOrcsArray.remove(id);
+      }
     }
   }
 }
