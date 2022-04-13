@@ -199,13 +199,22 @@ body{
     cursor: pointer;
 }
 
-.selected{
+.selectedStaked{
     background-color: rgba(0, 0, 0, 0.453);
     color: white;
     float: left;
-    margin: 4px;
-    height: 200px;
-    width: 130px;
+    height: 160px;
+    width: 110px;
+    margin: 5px;
+}
+
+.selectedUnstaked{
+    background-color: rgba(0, 0, 0, 0.453);
+    color: white;
+    float: left;
+    height: 146px;
+    width: 110px;
+    margin: 5px;
 }
 
 .selected:hover{
