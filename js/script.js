@@ -1,5 +1,5 @@
-var maticMainnetID = 137;
-var requestChainID = "0x89";
+var maticMainnetID = 80001;
+var requestChainID = "0x13881";
 //0x89 matic Mainnet -> 137
 //0x13881 matic Testnet -> 80001
 
