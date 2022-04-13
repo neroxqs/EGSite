@@ -364,21 +364,21 @@ async function drawNFT(typeArray, section, staked){
 
     if(staked){
       nft.onclick = function () {
-        if(document.getElementById('nft' + id).className == 'selected'){
+        if(document.getElementById('nft' + id).className == 'selectedStaked'){
           document.getElementById('nft' + id).className = 'nftStaked';
         }
         else{
-          document.getElementById('nft' + id).className = 'selected';
+          document.getElementById('nft' + id).className = 'selectedStaked';
         }
       }
     }
     else{
       nft.onclick = function () {
-        if(document.getElementById('nft' + id).className == 'selected'){
+        if(document.getElementById('nft' + id).className == 'selectedUnstaked'){
           document.getElementById('nft' + id).className = 'nftUnstaked';
         }
         else{
-          document.getElementById('nft' + id).className = 'selected';
+          document.getElementById('nft' + id).className = 'selectedUnstaked';
         }
       }
     }
@@ -522,7 +522,7 @@ async function ambush() {
   stakedOrcsArray.forEach(function(id){
     var nft = document.getElementById("nft" + id);
     
-    if (nft.className == 'selected') {
+    if (nft.className == 'selectedStaked') {
       arrayChecked.push(id);
   }
   });
@@ -547,7 +547,7 @@ async function stakeElfs(){
   unstakedElfsArray.forEach(function(id){
     var nft = document.getElementById("nft" + id);
     
-    if (nft.className == 'selected') {
+    if (nft.className == 'selectedUnstaked') {
       arrayChecked.push(id);
   }
   });
@@ -582,7 +582,7 @@ async function stakeOrcs(){
   unstakedOrcsArray.forEach(function(id){
     var nft = document.getElementById("nft" + id);
     
-    if (nft.className == 'selected') {
+    if (nft.className == 'selectedUnstaked') {
       arrayChecked.push(id);
   }
   });
@@ -615,7 +615,7 @@ async function unstakeElfs(){
   stakedElfsArray.forEach(function(id){
     var nft = document.getElementById("nft" + id);
     
-    if (nft.className == 'selected') {
+    if (nft.className == 'selectedStaked') {
       arrayChecked.push(id);
   }
   });
@@ -638,7 +638,7 @@ async function unstakeOrcs(){
   stakedOrcsArray.forEach(function(id){
     var nft = document.getElementById("nft" + id);
     
-    if (nft.className == 'selected') {
+    if (nft.className == 'selectedStaked') {
       arrayChecked.push(id);
   }
   });
@@ -660,7 +660,7 @@ async function selectAllElfsStake(){
   if(button.innerHTML == "Select all"){
     unstakedElfsArray.forEach(function(id){
       var nft = document.getElementById("nft" + id);
-      nft.className = 'selected';
+      nft.className = 'selectedUnstaked';
     });
     button.innerHTML = "Deselect all";
   }
@@ -679,7 +679,7 @@ async function selectAllOrcsStake(){
   if(button.innerHTML == "Select all"){
     unstakedOrcsArray.forEach(function(id){
       var nft = document.getElementById("nft" + id);
-      nft.className = 'selected';
+      nft.className = 'selectedUnstaked';
     });
     button.innerHTML = "Deselect all";
   }
@@ -698,7 +698,7 @@ async function selectAllElfsUnstake(){
   if(button.innerHTML == "Select all"){
     stakedElfsArray.forEach(function(id){
       var nft = document.getElementById("nft" + id);
-      nft.className = 'selected';
+      nft.className = 'selectedStaked';
     });
     button.innerHTML = "Deselect all";
   }
@@ -717,7 +717,7 @@ async function selectAllOrcsUnstake(){
   if(button.innerHTML == "Select all"){
     stakedOrcsArray.forEach(function(id){
       var nft = document.getElementById("nft" + id);
-      nft.className = 'selected';
+      nft.className = 'selectedStaked';
     });
     button.innerHTML = "Deselect all";
   }
@@ -736,7 +736,7 @@ async function claimElfRewards(){
   stakedElfsArray.forEach(function(id){
     var nft = document.getElementById("nft" + id);
     
-    if (nft.className == 'selected') {
+    if (nft.className == 'selectedStaked') {
       arrayChecked.push(id);
   }
   });
@@ -759,7 +759,7 @@ async function claimOrcRewards(){
   stakedOrcsArray.forEach(function(id){
     var nft = document.getElementById("nft" + id);
     
-    if (nft.className == 'selected') {
+    if (nft.className == 'selectedStaked') {
       arrayChecked.push(id);
   }
   });
