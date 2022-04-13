@@ -44,7 +44,10 @@ function displayMintedAmount(){
   async function cycle(){
     amount = await window.mintContract.methods.minted().call();
    
-    paragraph.innerHTML = amount + '/12200';
+    if(amount > 5200){
+      amount = 5200;
+    }
+    paragraph.innerHTML = amount + '/5200';
     
     setTimeout(cycle, 1000);
   }
