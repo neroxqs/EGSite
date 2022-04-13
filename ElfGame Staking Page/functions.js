@@ -374,7 +374,6 @@ async function drawNFT(typeArray, section, staked){
     var imageHTML = document.createElement('img');
     imageHTML.src = "https://ipfs.io/ipfs/" + idToImage.get(id).substring(7);
     imageHTML.id = 'NFTImage';
-    console.log(idToImage.get(id).substring(54).replace(".png",""));
     
     var tokenIdParagraph = document.createElement('p');
     tokenIdParagraph.id = 'idParagraph';
@@ -487,7 +486,7 @@ async function mintWithEthereum(){
   price = price * numberBox.value;
   price = price.toLocaleString('fullwide', {useGrouping:false});
 
-  await window.wethContract.methods.approve(json.stakeContractAddress, price).send({ from: accounts[0] });
+  await window.wethContract.methods.approve(json.mintContractAddress, price).send({ from: accounts[0] });
   await window.mintContract.methods.publicSale(numberBox.value).send({ from: accounts[0] });
 }
 
