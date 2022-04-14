@@ -255,6 +255,9 @@ body{
     background-color: rgba(255, 255, 255, 0.205);
 }
 
+#amountMintDiv{
+    padding-right: 6.8%;
+}
 
 
 /* --------------------
@@ -403,6 +406,9 @@ input[type=submit]:active {
     #mintedAmount{
         margin-right: 10%;;
     }
+    #amountMintDiv{
+        padding-right: 9%;
+    }
     
 }
 
@@ -410,7 +416,9 @@ input[type=submit]:active {
   .mintAndWand{
     text-align: center;
     margin-top: 80px;
-    
+}
+#amountMintDiv{
+    padding-right: 0;
 }
 }
 
