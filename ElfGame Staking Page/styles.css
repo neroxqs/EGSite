@@ -420,6 +420,9 @@ input[type=submit]:active {
 #amountMintDiv{
     padding-right: 0;
 }
+  #mintedAmount{
+    margin-right: 10%;
+ }   
 }
 
 @media only screen and (max-width:767px){
