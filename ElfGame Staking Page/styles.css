@@ -429,7 +429,9 @@ input[type=submit]:active {
     #infoSection{
         width: 100%;
     }
-   
+     #mintedAmount{
+    margin-right: 8.5%;
+ }   
 }
 
 @media only screen and (max-width:700px){
