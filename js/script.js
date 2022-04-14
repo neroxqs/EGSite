@@ -238,7 +238,7 @@ async function displayWallet() {
     window.web3 = new Web3(window.ethereum);
     checkNetwork();
     var accounts = await getAccounts();
-    var numberBox = document.getElementById("mintAmount");
+    //var numberBox = document.getElementById("mintAmount");
 
     if(accounts.length>0){
         connectWalletButton.style.visibility = "hidden";
@@ -249,18 +249,18 @@ async function displayWallet() {
         window.manaContract = await loadManaContract();
         window.wethContract = await loadWethContract();
         
-        mintDiv[0].style.visibility = "visible";
+        //mintDiv[0].style.visibility = "visible";
       
-        displayMintedAmount();
+        //displayMintedAmount();
     }
     else{
         updateAccounts("");
-        mintDiv[0].style.visibility = "hidden";
+        //mintDiv[0].style.visibility = "hidden";
         connectWalletButton.style.visibility = "visible";
     }
   }
   else{
-      mintDiv[0].style.visibility = "hidden";
+      //mintDiv[0].style.visibility = "hidden";
       connectWalletButton.style.visibility = "visible";
   }
 }
