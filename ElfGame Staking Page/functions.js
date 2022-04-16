@@ -631,12 +631,12 @@ async function unstakeElfs(){
   }
   });
 
-  if(arrayChecked.length > 0){
+  if(arrayChecked.length>0){
     const accounts = await getAccounts();
-    await window.stakeContract.methods.batchUnstakeElf(arrayChecked).send({ from: accounts[0] });
+    await window.stakeContract.methods.claimManyRewards(arrayChecked,true).send({ from: accounts[0] });
 
+    updateMana();
     loadTokens();
-    updateTotalStakedElfs();
   }
   else{
     alert("Select a staked elf.");
@@ -645,7 +645,7 @@ async function unstakeElfs(){
 
 async function unstakeOrcs(){
   var arrayChecked = new Array();
-  
+
   stakedOrcsArray.forEach(function(id){
     var nft = document.getElementById("nft" + id);
     
@@ -654,10 +654,11 @@ async function unstakeOrcs(){
   }
   });
 
-  if(arrayChecked.length > 0){
+  if(arrayChecked.length>0){
     const accounts = await getAccounts();
-    await window.stakeContract.methods.batchUnstakeOrc(arrayChecked).send({ from: accounts[0] });
+    await window.stakeContract.methods.claimManyRewards(arrayChecked,true).send({ from: accounts[0] });
 
+    updateMana();
     loadTokens();
   }
   else{
@@ -785,8 +786,6 @@ async function claimOrcRewards(){
   else{
     alert("Select a staked orc.");
   }
-
-  updateMana();
 }
 
 getContractsJSON();
