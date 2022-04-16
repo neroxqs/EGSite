@@ -145,7 +145,7 @@ async function updatePrice() {
   
   var text = (numberBox.value == 1) ? "MINT" : "MINTS";
   
-  manaInfo.innerHTML = numberBox.value + " " + text + " = " (price/10**18) + " $MANA";
+  manaInfo.innerHTML = numberBox.value + " " + text + " = " + (price/10**18) + " $MANA";
 }
 
 async function updateMana() {
