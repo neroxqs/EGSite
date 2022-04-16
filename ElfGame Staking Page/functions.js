@@ -143,7 +143,9 @@ async function updatePrice() {
   var price = await window.mintContract.methods.manaPrice(numberBox.value).call();
   price = price * numberBox.value;
   
-  manaInfo.innerHTML = (price/10**18) + " $MANA";
+  var text = (numberBox.value == 1) ? "MINT" : "MINTS";
+  
+  manaInfo.innerHTML = numberBox.value + " " + text + " = " (price/10**18) + " $MANA";
 }
 
 async function updateMana() {
@@ -468,6 +470,7 @@ async function load(){
   window.wethContract = await loadWethContract();
 
   displayMintedAmount();
+  updatePrice();
   await loadTokens();
   updateMana();
   updateTotalStakedElfs();
