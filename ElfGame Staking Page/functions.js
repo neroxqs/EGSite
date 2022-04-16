@@ -135,6 +135,17 @@ async function loadWethContract() {
 
 // Update elements
 
+async function updatePrice() {
+  var numberBox = document.getElementById("inputMintAmount");
+  var manaInfo = document.getElementById("manaInfo");
+  const accounts = await getAccounts();
+
+  var price = await window.mintContract.methods.manaPrice(numberBox.value).call();
+  price = price * numberBox.value;
+  
+  manaInfo.innerHTML = (price/10**18) + " $MANA";
+}
+
 async function updateMana() {
   const manaBalance = document.getElementById('manaBalance');
 
@@ -472,6 +483,8 @@ async function decrease(){
   if(numberBox.value > 1){
     numberBox.value = parseInt(numberBox.value) - 1;
     
+    updatePrice();
+    
     if(numberBox.value == 1){
       buttonDecrease[0].disabled = true;
     }
@@ -489,6 +502,8 @@ async function increase(){
   
   if(numberBox.value < 10){
     numberBox.value = parseInt(numberBox.value) + 1;
+    
+    updatePrice();
     
     if(numberBox.value == 10){
       buttonIncrease[0].disabled = true;
