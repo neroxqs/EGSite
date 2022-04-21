@@ -539,8 +539,14 @@ async function mintWithMana(){
   var price = await window.mintContract.methods.manaPrice(numberBox.value).call();
   price = price * numberBox.value;
   price = price.toLocaleString('fullwide', {useGrouping:false});
-
-  await window.manaContract.methods.approve(json.mintContractAddress, price).send({ from: accounts[0] });
+  
+  var allowance = await window.manaContract.methods.allowance(accounts[0], json.mintContractAddress).call();
+  allowance = allowance.toLocaleString('fullwide', {useGrouping:false});
+  
+  if(allowance/10**18 < price/10**18){
+    await window.manaContract.methods.approve(json.mintContractAddress, price).send({ from: accounts[0] });
+  }
+  
   await window.mintContract.methods.buyWithMana(numberBox.value).send({ from: accounts[0] });
 }
 
